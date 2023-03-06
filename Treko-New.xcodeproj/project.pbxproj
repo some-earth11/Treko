@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A54AFED29B5BCE800735AF5 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54AFEC29B5BCE800735AF5 /* FeedViewController.swift */; };
 		3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147729B07E1D00D1D9CB /* AppDelegate.swift */; };
 		3A82147A29B07E1D00D1D9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */; };
 		3A82147C29B07E1D00D1D9CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147B29B07E1D00D1D9CB /* ViewController.swift */; };
 		3A82147F29B07E1D00D1D9CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A82147D29B07E1D00D1D9CB /* Main.storyboard */; };
 		3A82148129B07E1E00D1D9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A82148029B07E1E00D1D9CB /* Assets.xcassets */; };
 		3A82148429B07E1E00D1D9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A82148229B07E1E00D1D9CB /* LaunchScreen.storyboard */; };
+		3A8B2FF629B1EC5600F1B5FC /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B2FF429B1EC5600F1B5FC /* iCarousel.m */; };
+		3A8B2FFC29B2033700F1B5FC /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B2FFB29B2033700F1B5FC /* MyCollectionViewCell.swift */; };
+		3A8B2FFE29B2044F00F1B5FC /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B2FFD29B2044F00F1B5FC /* SampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A54AFEC29B5BCE800735AF5 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3A82147429B07E1D00D1D9CB /* Treko-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treko-New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A82147729B07E1D00D1D9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		3A82148029B07E1E00D1D9CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A82148329B07E1E00D1D9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A82148529B07E1E00D1D9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A8B2FF329B1EC5600F1B5FC /* Treko-New-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Treko-New-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A8B2FF429B1EC5600F1B5FC /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		3A8B2FF529B1EC5600F1B5FC /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		3A8B2FFB29B2033700F1B5FC /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A8B2FFD29B2044F00F1B5FC /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +50,7 @@
 		3A82146B29B07E1D00D1D9CB = {
 			isa = PBXGroup;
 			children = (
+				3A54AFEC29B5BCE800735AF5 /* FeedViewController.swift */,
 				3A82147629B07E1D00D1D9CB /* Treko-New */,
 				3A82147529B07E1D00D1D9CB /* Products */,
 			);
@@ -60,9 +71,14 @@
 				3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */,
 				3A82147B29B07E1D00D1D9CB /* ViewController.swift */,
 				3A82147D29B07E1D00D1D9CB /* Main.storyboard */,
+				3A8B2FFB29B2033700F1B5FC /* MyCollectionViewCell.swift */,
+				3A8B2FFD29B2044F00F1B5FC /* SampleViewController.swift */,
 				3A82148029B07E1E00D1D9CB /* Assets.xcassets */,
 				3A82148229B07E1E00D1D9CB /* LaunchScreen.storyboard */,
 				3A82148529B07E1E00D1D9CB /* Info.plist */,
+				3A8B2FF529B1EC5600F1B5FC /* iCarousel.h */,
+				3A8B2FF429B1EC5600F1B5FC /* iCarousel.m */,
+				3A8B2FF329B1EC5600F1B5FC /* Treko-New-Bridging-Header.h */,
 			);
 			path = "Treko-New";
 			sourceTree = "<group>";
@@ -99,6 +115,7 @@
 				TargetAttributes = {
 					3A82147329B07E1D00D1D9CB = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -139,8 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A82147C29B07E1D00D1D9CB /* ViewController.swift in Sources */,
+				3A8B2FFC29B2033700F1B5FC /* MyCollectionViewCell.swift in Sources */,
+				3A8B2FFE29B2044F00F1B5FC /* SampleViewController.swift in Sources */,
+				3A8B2FF629B1EC5600F1B5FC /* iCarousel.m in Sources */,
 				3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */,
 				3A82147A29B07E1D00D1D9CB /* SceneDelegate.swift in Sources */,
+				3A54AFED29B5BCE800735AF5 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FKQ6M8JA2N;
@@ -303,6 +325,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "axone125.Treko-New";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Treko-New/Treko-New-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FKQ6M8JA2N;
@@ -331,6 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "axone125.Treko-New";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Treko-New/Treko-New-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
