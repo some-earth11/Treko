@@ -9,12 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="184" translatesAutoresizingMaskIntoConstraints="NO" id="qqa-zn-mhX" userLabel="Top Stack View">
@@ -208,13 +208,15 @@
                             <constraint firstItem="tVo-op-Pum" firstAttribute="top" secondItem="eoF-3u-U1R" secondAttribute="bottom" constant="190" id="wck-iM-8Zs"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="wY7-He-dCH"/>
+                    <navigationItem key="navigationItem" id="K92-ZT-2Lt"/>
                     <connections>
                         <outlet property="iCarouselView" destination="eoF-3u-U1R" id="1dV-mE-6Nx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61.832061068702288" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1447" y="-529"/>
         </scene>
         <!--Sample View Controller-->
         <scene sceneID="r2n-R2-OXe">
@@ -1696,12 +1698,12 @@
             </objects>
             <point key="canvasLocation" x="1820" y="339"/>
         </scene>
-        <!--Item-->
+        <!--Chat-->
         <scene sceneID="Hli-lI-Bkp">
             <objects>
                 <viewController id="7Qw-X6-0sv" customClass="TableViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aB9-Ad-Ipg">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="184" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-gA-4TI" userLabel="Top Stack View">
@@ -1726,7 +1728,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mLB-Gu-MJh">
-                                <rect key="frame" x="0.0" y="139" width="430" height="724"/>
+                                <rect key="frame" x="0.0" y="139" width="430" height="710"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.30196079609999998" green="0.66274511810000003" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1800,7 +1802,7 @@
                             <constraint firstItem="ee7-gA-4TI" firstAttribute="leading" secondItem="gfy-6D-5Hr" secondAttribute="leading" id="rD3-RK-CGm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="4Zk-rS-dCx"/>
+                    <tabBarItem key="tabBarItem" title="Chat" id="4Zk-rS-dCx"/>
                     <connections>
                         <outlet property="table" destination="mLB-Gu-MJh" id="bIa-QW-PNX"/>
                     </connections>
@@ -1850,6 +1852,7 @@
                         <segue destination="kMh-FX-Bn3" kind="relationship" relationship="viewControllers" id="pEg-5N-URt"/>
                         <segue destination="QfA-ei-qJc" kind="relationship" relationship="viewControllers" id="P2d-37-sZU"/>
                         <segue destination="7Qw-X6-0sv" kind="relationship" relationship="viewControllers" id="r8h-YU-m8D"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IJQ-vJ-Msv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsE-x3-jJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1887,7 +1890,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wUf-pU-i7J"/>
+        <segue reference="r8h-YU-m8D"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
