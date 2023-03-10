@@ -12,11 +12,4 @@ struct Posts{
     var numberOfComments:Int64;
     var numberOfLikes:Int64;
     var location:String;
-    init(images: [String], numberOfComments: Int64, numberOfLikes: Int64, location: String) {
-        self.images = images
-        self.numberOfComments = numberOfComments
-        self.numberOfLikes = numberOfLikes
-        self.location = location
-    }
-    
 }

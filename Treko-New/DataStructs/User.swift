@@ -15,10 +15,6 @@ struct User{
     var numberOfPosts:Int64;
     var numberOfFollowers:Int64;
     var numberOfFollowing:Int64;
-    
-    var posts = [Posts(images: [String], numberOfComments: Int64, numberOfLikes: Int64, location: String)];
-    var stories = [Story(image: String, storyTitle: String)];
-    
     init(userName: String, fullName: String, profilePicture: String, profileDescription: String, numberOfPosts: Int64, numberOfFollowers: Int64, numberOfFollowing: Int64) {
         self.userName = userName
         self.fullName = fullName

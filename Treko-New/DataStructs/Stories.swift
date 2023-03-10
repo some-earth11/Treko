@@ -10,8 +10,4 @@ import Foundation
 struct Story{
     var image:String;
     var storyTitle:String;
-    init(image: String, storyTitle: String) {
-        self.image = image
-        self.storyTitle = storyTitle
-    }
 }
