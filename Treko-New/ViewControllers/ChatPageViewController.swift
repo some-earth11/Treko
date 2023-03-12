@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UIViewController,UITableViewDataSource {
+class ChatPageViewController: UIViewController,UITableViewDataSource {
     
     @IBOutlet weak var table:UITableView!
     
@@ -35,16 +35,13 @@ class TableViewController: UIViewController,UITableViewDataSource {
         cell.iconImageView.image = UIImage(named: datas.imageName)
         return cell
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+//extension ViewController : UITableViewDelegate{
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let vc = storyboard?.instantiateViewController(withIdentifier: "ChatingPageViewController") as? ChatingPageViewController{
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+//    }
+//}
