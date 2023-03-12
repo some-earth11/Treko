@@ -1151,6 +1151,22 @@
             </objects>
             <point key="canvasLocation" x="4446.9767441860467" y="-391.41630901287556"/>
         </scene>
+        <!--Buy-->
+        <scene sceneID="1uK-pH-1xW">
+            <objects>
+                <viewController id="ghE-5R-T0m" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eaK-qg-mcN">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="A8T-ad-f3w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Buy" id="ko5-zX-wcf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="06J-4C-gAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5519" y="-709"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="LWY-Y8-YNG">
             <objects>
@@ -1648,11 +1664,11 @@
             <objects>
                 <viewController id="7Qw-X6-0sv" customClass="ChatPageViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aB9-Ad-Ipg">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="184" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-gA-4TI" userLabel="Top Stack View">
-                                <rect key="frame" x="0.0" y="56" width="430" height="80"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmd-ye-JIf">
                                         <rect key="frame" x="0.0" y="23" width="94.666666666666671" height="34"/>
@@ -1672,16 +1688,17 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mLB-Gu-MJh">
-                                <rect key="frame" x="0.0" y="136" width="430" height="727"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mLB-Gu-MJh">
+                                <rect key="frame" x="0.0" y="183" width="430" height="666"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.30196079609999998" green="0.66274511810000003" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.30196079609999998" green="0.66274511810000003" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.30196079609999998" green="0.66274511810000003" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="131" id="dVz-9U-Ny9" customClass="ChatTableViewCell" customModule="Treko_New" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="430" height="131"/>
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="430" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dVz-9U-Ny9" id="5Dn-Mf-UVU">
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="131"/>
@@ -1761,11 +1778,11 @@
             <objects>
                 <viewController storyboardIdentifier="ChatingPageViewController" id="ohy-2g-5fK" customClass="ChatingPageViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXq-hR-uB8">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b86-D6-HgT">
-                                <rect key="frame" x="0.0" y="56" width="430" height="807"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Jjh-yB-pEe">
                                         <rect key="frame" x="0.0" y="0.0" width="430" height="100"/>
@@ -1818,7 +1835,7 @@
                                         </constraints>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u5w-Dt-UUY">
-                                        <rect key="frame" x="0.0" y="100" width="430" height="657"/>
+                                        <rect key="frame" x="0.0" y="100" width="430" height="596"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -1945,7 +1962,7 @@
                                         </prototypes>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIx-rl-Z3U">
-                                        <rect key="frame" x="0.0" y="757" width="430" height="50"/>
+                                        <rect key="frame" x="0.0" y="696" width="430" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R8Y-HO-J29">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
@@ -2005,14 +2022,15 @@
                         <segue destination="QfA-ei-qJc" kind="relationship" relationship="viewControllers" id="P2d-37-sZU"/>
                         <segue destination="K2e-0u-1dh" kind="relationship" relationship="viewControllers" id="r8h-YU-m8D"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IJQ-vJ-Msv"/>
-                        <segue destination="qRq-b4-2PM" kind="relationship" relationship="viewControllers" id="HYQ-F7-Pxh"/>
+                        <segue destination="gOt-if-Yf7" kind="relationship" relationship="viewControllers" id="HYQ-F7-Pxh"/>
+                        <segue destination="ghE-5R-T0m" kind="relationship" relationship="viewControllers" id="Sct-wc-zpm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsE-x3-jJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2535" y="-1185"/>
+            <point key="canvasLocation" x="2378" y="-1438"/>
         </scene>
-        <!--Item-->
+        <!--Feed View Controller-->
         <scene sceneID="GsI-8z-eL2">
             <objects>
                 <viewController id="qRq-b4-2PM" customClass="FeedViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
@@ -2021,7 +2039,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-Xy-XZP">
-                                <rect key="frame" x="0.0" y="59" width="430" height="790"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="184" translatesAutoresizingMaskIntoConstraints="NO" id="80R-Gf-fLx" userLabel="Top Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="430" height="80"/>
@@ -2173,12 +2191,13 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="500" estimatedRowHeight="-1" sectionHeaderHeight="10" estimatedSectionHeaderHeight="-1" sectionFooterHeight="10" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pdT-p7-vXV">
-                                        <rect key="frame" x="0.0" y="294.33333333333326" width="430" height="495.66666666666674"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="500" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pdT-p7-vXV">
+                                        <rect key="frame" x="0.0" y="294.33333333333326" width="430" height="451.66666666666674"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="489" id="RWr-ed-Shu" customClass="FeedTableViewCell" customModule="Treko_New" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="50" width="430" height="489"/>
+                                                <rect key="frame" x="0.0" y="55.333332061767578" width="430" height="489"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RWr-ed-Shu" id="Y7J-nF-hMT">
                                                     <rect key="frame" x="0.0" y="0.0" width="430" height="489"/>
@@ -2188,30 +2207,30 @@
                                                             <rect key="frame" x="0.0" y="-2.3333333333332575" width="430" height="445"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Gw-hf-Qnt">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Gw-hf-Qnt">
                                                                     <rect key="frame" x="5" y="-20" width="420" height="489"/>
                                                                     <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="156" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-mA-gv8">
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-mA-gv8">
                                                                             <rect key="frame" x="5" y="0.0" width="410" height="60"/>
                                                                             <subviews>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XbJ-6N-IxS">
-                                                                                    <rect key="frame" x="0.0" y="1.6666666666666679" width="173.66666666666666" height="56.666666666666657"/>
+                                                                                    <rect key="frame" x="0.0" y="1.6666666666666679" width="135.66666666666666" height="56.666666666666657"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aryan Singh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSI-pU-buS">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="173.66666666666666" height="32.666666666666664"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="32.666666666666664"/>
                                                                                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="28"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5qU-LO-OxK">
-                                                                                            <rect key="frame" x="0.0" y="34.666666666666664" width="173.66666666666666" height="22"/>
+                                                                                            <rect key="frame" x="0.0" y="34.666666666666664" width="135.66666666666666" height="22"/>
                                                                                             <subviews>
                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BcM-et-oG8">
-                                                                                                    <rect key="frame" x="0.0" y="0.99999999999999822" width="52" height="20.333333333333336"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.99999999999999822" width="40.666666666666664" height="20.333333333333336"/>
                                                                                                     <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 </imageView>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nepal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMh-k5-b2g">
-                                                                                                    <rect key="frame" x="52.000000000000007" y="0.0" width="121.66666666666669" height="22"/>
+                                                                                                    <rect key="frame" x="40.666666666666657" y="0.0" width="95" height="22"/>
                                                                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     <nil key="highlightedColor"/>
@@ -2219,9 +2238,6 @@
                                                                                             </subviews>
                                                                                         </stackView>
                                                                                     </subviews>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" constant="150" id="Eae-MJ-stW"/>
-                                                                                    </constraints>
                                                                                 </stackView>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Gg0-y9-zZS">
                                                                                     <rect key="frame" x="329.66666666666669" y="0.0" width="80.333333333333314" height="60"/>
@@ -2366,14 +2382,14 @@
                             <constraint firstItem="aEo-Xy-XZP" firstAttribute="top" secondItem="LaQ-OT-ZST" secondAttribute="top" id="X6k-Je-211"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ooR-Tm-K7J"/>
+                    <navigationItem key="navigationItem" id="gQz-f2-f10"/>
                     <connections>
                         <outlet property="table" destination="pdT-p7-vXV" id="kAP-9D-WA1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eB-tm-pGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3687.9069767441861" y="-1185.1931330472103"/>
+            <point key="canvasLocation" x="4586.5116279069771" y="-1185.1931330472103"/>
         </scene>
         <!--Feed-->
         <scene sceneID="MsA-e5-xxg">
@@ -2411,7 +2427,7 @@
                     <tabBarItem key="tabBarItem" title="Chat" id="4Zk-rS-dCx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PQg-TA-AzD">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2423,9 +2439,28 @@
             </objects>
             <point key="canvasLocation" x="2862" y="422"/>
         </scene>
+        <!--Feed-->
+        <scene sceneID="W8A-ka-rqu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gOt-if-Yf7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" id="ooR-Tm-K7J"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2uc-yU-3Ha">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qRq-b4-2PM" kind="relationship" relationship="rootViewController" id="f68-vi-4uj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wxu-tG-Ndx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3687.9069767441861" y="-1185.1931330472103"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wUf-pU-i7J"/>
+        <segue reference="r8h-YU-m8D"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
