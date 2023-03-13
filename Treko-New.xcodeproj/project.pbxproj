@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A128EFC29B6F6AD00A0EC1D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A128EFB29B6F6AD00A0EC1D /* Feed.swift */; };
 		3A128EFE29B6F8D800A0EC1D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A128EFD29B6F8D800A0EC1D /* Posts.swift */; };
+		3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */; };
 		3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147729B07E1D00D1D9CB /* AppDelegate.swift */; };
 		3A82147A29B07E1D00D1D9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */; };
 		3A82147C29B07E1D00D1D9CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147B29B07E1D00D1D9CB /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		3AACD58629BB07DB00B96F54 /* ChatPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACD58529BB07DB00B96F54 /* ChatPage.swift */; };
 		3AB2681C29BDB457001926D5 /* ChatingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB2681B29BDB457001926D5 /* ChatingPageViewController.swift */; };
 		3AB2681E29BDBE44001926D5 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB2681D29BDBE44001926D5 /* FeedTableViewCell.swift */; };
+		3AC8DE7829BDDDA0005EB344 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8DE7729BDDDA0005EB344 /* SampleViewController.swift */; };
 		3AE1423F29B6FAB20054EF91 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1423E29B6FAB20054EF91 /* ProfileViewController.swift */; };
 		3AE1424129B6FACC0054EF91 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1424029B6FACC0054EF91 /* FeedViewController.swift */; };
 		3AE1424329B6FB190054EF91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1424229B6FB190054EF91 /* User.swift */; };
@@ -31,6 +33,7 @@
 /* Begin PBXFileReference section */
 		3A128EFB29B6F6AD00A0EC1D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		3A128EFD29B6F8D800A0EC1D /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraouselViewController.swift; sourceTree = "<group>"; };
 		3A82147429B07E1D00D1D9CB /* Treko-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treko-New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A82147729B07E1D00D1D9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		3AACD58529BB07DB00B96F54 /* ChatPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPage.swift; sourceTree = "<group>"; };
 		3AB2681B29BDB457001926D5 /* ChatingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatingPageViewController.swift; sourceTree = "<group>"; };
 		3AB2681D29BDBE44001926D5 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		3AC8DE7729BDDDA0005EB344 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		3AE1423E29B6FAB20054EF91 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3AE1424029B6FACC0054EF91 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3AE1424229B6FB190054EF91 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				3AB2681B29BDB457001926D5 /* ChatingPageViewController.swift */,
 				3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */,
 				3AE1424029B6FACC0054EF91 /* FeedViewController.swift */,
+				3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 				3A82147B29B07E1D00D1D9CB /* ViewController.swift */,
 				3A82147D29B07E1D00D1D9CB /* Main.storyboard */,
 				3A8B2FFB29B2033700F1B5FC /* MyCollectionViewCell.swift */,
+				3AC8DE7729BDDDA0005EB344 /* SampleViewController.swift */,
 				3A128EFF29B6F90D00A0EC1D /* ViewControllers */,
 				3A82148029B07E1E00D1D9CB /* Assets.xcassets */,
 				3AACD58229BB065400B96F54 /* TableView */,
@@ -210,11 +216,13 @@
 				3AB2681C29BDB457001926D5 /* ChatingPageViewController.swift in Sources */,
 				3AE1424129B6FACC0054EF91 /* FeedViewController.swift in Sources */,
 				3A8B2FFC29B2033700F1B5FC /* MyCollectionViewCell.swift in Sources */,
+				3AC8DE7829BDDDA0005EB344 /* SampleViewController.swift in Sources */,
 				3A8B2FF629B1EC5600F1B5FC /* iCarousel.m in Sources */,
 				3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */,
 				3AE1424529B6FE100054EF91 /* Stories.swift in Sources */,
 				3A82147A29B07E1D00D1D9CB /* SceneDelegate.swift in Sources */,
 				3AACD58129BA65A600B96F54 /* ChatPageViewController.swift in Sources */,
+				3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */,
 				3AB2681E29BDBE44001926D5 /* FeedTableViewCell.swift in Sources */,
 				3AACD58629BB07DB00B96F54 /* ChatPage.swift in Sources */,
 				3A128EFE29B6F8D800A0EC1D /* Posts.swift in Sources */,

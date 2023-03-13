@@ -6,6 +6,7 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -2005,6 +2006,71 @@
             </objects>
             <point key="canvasLocation" x="4949" y="422"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="wMU-jB-VXy">
+            <objects>
+                <viewController id="rKn-0E-8qz" customClass="SampleViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MwZ-zi-qag">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LtB-UK-BMT">
+                                <rect key="frame" x="20" y="343" width="390" height="163"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="163" id="084-wc-k4u"/>
+                                    <constraint firstAttribute="width" constant="390" id="KBU-Hu-E3V"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q6x-LT-PPv">
+                                    <size key="itemSize" width="373" height="154"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="maz-mB-ZfQ" customClass="MyCollectionViewCell" customModule="Treko_New" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="163"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hnU-za-QUh">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="163"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain2" translatesAutoresizingMaskIntoConstraints="NO" id="Z5s-bC-lbC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="163"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Z5s-bC-lbC" secondAttribute="bottom" id="EUA-9E-cNs"/>
+                                                <constraint firstItem="Z5s-bC-lbC" firstAttribute="leading" secondItem="hnU-za-QUh" secondAttribute="leading" id="lmv-Gi-khg"/>
+                                                <constraint firstItem="Z5s-bC-lbC" firstAttribute="top" secondItem="hnU-za-QUh" secondAttribute="top" id="qlP-d2-Ri0"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z5s-bC-lbC" secondAttribute="trailing" id="vW2-Dc-lnx"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="390" height="163"/>
+                                        <connections>
+                                            <outlet property="myImage" destination="Z5s-bC-lbC" id="TwQ-fR-zwx"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7PJ-bK-gHq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LtB-UK-BMT" firstAttribute="centerY" secondItem="MwZ-zi-qag" secondAttribute="centerY" id="h2e-BL-UKi"/>
+                            <constraint firstItem="LtB-UK-BMT" firstAttribute="centerX" secondItem="MwZ-zi-qag" secondAttribute="centerX" id="qwL-IC-QHE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="yQ5-FI-DdX"/>
+                    <connections>
+                        <outlet property="CollectionView" destination="LtB-UK-BMT" id="bge-19-PdF"/>
+                        <outlet property="collectionView" destination="LtB-UK-BMT" id="Rbk-Df-YOf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJF-rr-r42" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446.9767441860465" y="-1438.197424892704"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5Zi-4O-3Jy">
             <objects>
@@ -2024,11 +2090,29 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IJQ-vJ-Msv"/>
                         <segue destination="gOt-if-Yf7" kind="relationship" relationship="viewControllers" id="HYQ-F7-Pxh"/>
                         <segue destination="ghE-5R-T0m" kind="relationship" relationship="viewControllers" id="Sct-wc-zpm"/>
+                        <segue destination="rKn-0E-8qz" kind="relationship" relationship="viewControllers" id="KT8-Qg-5np"/>
+                        <segue destination="QTd-uh-Ev8" kind="relationship" relationship="viewControllers" id="2FR-sY-1iH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsE-x3-jJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2378" y="-1438"/>
+            <point key="canvasLocation" x="2586" y="-1624"/>
+        </scene>
+        <!--caraousel-->
+        <scene sceneID="alE-aZ-RCf">
+            <objects>
+                <viewController id="QTd-uh-Ev8" customClass="CaraouselViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oSh-Fk-sGH">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="doZ-x2-14z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="caraousel" id="dDM-B0-IL8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Dp-tE-8hE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4054" y="-2025"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="GsI-8z-eL2">
@@ -2252,7 +2336,6 @@
                                                                             <rect key="frame" x="0.0" y="65" width="420" height="275"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="275" id="kYQ-Kl-b0K"/>
-                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="387" id="mYt-MA-4As"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEi-9N-xES" userLabel="Comments View">

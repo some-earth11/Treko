@@ -2,42 +2,39 @@
 //  SampleViewController.swift
 //  Treko-New
 //
-//  Created by Aryan Singh on 03/03/23.
+//  Created by Aryan Singh on 12/03/23.
 //
 
 import UIKit
 
-//var collectionViewList = [
-//    "profile",
-//    "profile",
-//    "profile",
-//    "profile",
-//    "profile",
-//    "profile",]
+class SampleViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
 
-//@IBOutlet weak var myCollectionView: UICollectionView!
-
-class SampleViewController: UIViewController {
+    @IBOutlet var CollectionView: UICollectionView!
+    
+    var datas:[String] = [
+        "mountain1","mountain2","mountain3","mountain4"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return datas.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCollectionViewCell
+        cell.myImage.image = UIImage(named: datas[indexPath.row])
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 390, height: 163)
+    }
+    
 }
-//
-//extension ViewController:UICollectionViewDelegate,UICollectionViewDataSource{
-//func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//    return collectionViewList.count
-//}
-//
-//func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//    let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCollectionViewCell
-//    cell.myImage.image = UIImage(named: collectionViewList[indexPath.row])
-//    cell.myImage.layer.cornerRadius = cell.frame.height/2
-//    return cell;
-//}
-//}
 
-
-
+    
+    
 
