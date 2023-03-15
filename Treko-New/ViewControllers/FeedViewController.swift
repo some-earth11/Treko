@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController,UITableViewDataSource {
+class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
     
@@ -25,14 +25,23 @@ class FeedViewController: UIViewController,UITableViewDataSource {
         table?.dataSource = self
         // Do any additional setup after loading the view.
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "Post_viewViewController") as? Post_viewViewController
+        let datas = data[indexPath.row]
+        vc?.name_label = datas.name
+        vc?.location_label = datas.location
+        vc?.profile_image = UIImage(named: datas.profileImage)!
+        vc?.post_image = UIImage(named: datas.feedImages)!
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let datas = data[indexPath.row]
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
-        cell.noOfLikesLabel.text = String(datas.numberOfLikes)
-        cell.noOfCommentsLabel.text = String(datas.numberOfComments)
+        cell.noOfLikesLabel.text = String(datas.numberOfLikes)+" Likes"
+        cell.noOfCommentsLabel.text = String(datas.numberOfComments)+" Comments"
         cell.postImage.image = UIImage(named: datas.feedImages)
         cell.profileImage.image = UIImage(named: datas.profileImage)
         cell.locationLabel.text = datas.location

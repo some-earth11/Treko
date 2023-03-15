@@ -7,7 +7,7 @@
 
 import Foundation
 struct Chat{
-    let name : String
+    let username : String
     let imageName : String
-    let chat : String
+    let fullname : String
 }

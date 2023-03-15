@@ -12,8 +12,17 @@ class ChatingPageViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var description_profile: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    
+    var profile_Image = UIImage()
+    var profile_name = ""
+    var profile_description = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userName.text = profile_name
+        description_profile.text = profile_description
+        profileImage.image = profile_Image
 
         // Do any additional setup after loading the view.
     }
