@@ -8,7 +8,6 @@
 import UIKit
 
 class FeedTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var noOfCommentsLabel: UILabel!
     @IBOutlet weak var noOfLikesLabel: UILabel!
     @IBOutlet weak var postImage: UIImageView!

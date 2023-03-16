@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ChatingPageViewController: UIViewController {
+class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    @IBOutlet weak var userName: UILabel!
+
+    @IBOutlet var table: UITableView!
     @IBOutlet weak var description_profile: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
@@ -17,25 +18,51 @@ class ChatingPageViewController: UIViewController {
     var profile_name = ""
     var profile_description = ""
     
+    let data:[Chats] = [
+    Chats(message: "HelloHelloHelloHelloHelloHelloHelloHelloHelloHello", send: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hello", send: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hello", send: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hello", send: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hello", send: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hello", send: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hello", send: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hello", send: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hello", send: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hi", recieve: true),
+    Chats(message: "Hello", send: true),
+    Chats(message: "Hi", recieve: true),
+    ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        userName.text = profile_name
+        title = profile_name
+        print(data)
         description_profile.text = profile_description
         profileImage.image = profile_Image
-
-        // Do any additional setup after loading the view.
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let datas = data[indexPath.row]
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChattingPage_TableViewCell
+        cell.message.text = datas.message
+        cell.send = datas.send
+        cell.recieve = datas.recieve
+        return cell
+        
     }
-    */
-
+    
 }

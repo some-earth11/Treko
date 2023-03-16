@@ -20,7 +20,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
-        
         let loggedInUser = User(userName: "aryansingh_920", fullName: "Aryan Singh", profilePicture: "profile", profileDescription: "Trekker", numberOfPosts: 45, numberOfFollowers: 100, numberOfFollowing: 498)
 
         
@@ -33,15 +32,4 @@ class ProfileViewController: UIViewController {
         profileDescription.text = loggedInUser.profileDescription
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -12,18 +12,18 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
     @IBOutlet weak var table: UITableView!
     
     let data:[Feed] = [
-        Feed(name: "Aryan Singh", location: "Nepal", feedImages: "mountain1", profileImage: "profile", numberOfComments: 104, numberOfLikes: 521),
-        Feed(name: "Aryan", location: "Nepal", feedImages: "mountain2", profileImage: "profile", numberOfComments: 104, numberOfLikes: 521),
-        Feed(name: "Aryan Singh", location: "Nepal", feedImages: "mountain3", profileImage: "profile", numberOfComments: 104, numberOfLikes: 521),
-        Feed(name: "Aryan", location: "Nepal", feedImages: "mountain4", profileImage: "profile", numberOfComments: 104, numberOfLikes: 521),
-        Feed(name: "Aryan Singh", location: "Nepal", feedImages: "mountain4", profileImage: "profile", numberOfComments: 104, numberOfLikes: 521)
+        Feed(name: "Aryan Singh", location: "Nepal", feedImages: "mountain1", profileImage: "profile", numberOfComments: 97, numberOfLikes: 32),
+        Feed(name: "Aryan", location: "Nepal", feedImages: "mountain2", profileImage: "profile", numberOfComments: 65, numberOfLikes: 86),
+        Feed(name: "Aryan Singh", location: "Nepal", feedImages: "mountain3", profileImage: "profile", numberOfComments: 98, numberOfLikes: 42),
+        Feed(name: "Aryan", location: "Nepal", feedImages: "mountain4", profileImage: "profile", numberOfComments: 76, numberOfLikes: 21),
+        Feed(name: "Aryan Singh", location: "Nepal", feedImages: "mountain4", profileImage: "profile", numberOfComments: 54, numberOfLikes: 10)
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        title = "Feed"
+        title = "Feed"
         table?.dataSource = self
-        // Do any additional setup after loading the view.
+
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "Post_viewViewController") as? Post_viewViewController
@@ -32,7 +32,7 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
         vc?.location_label = datas.location
         vc?.profile_image = UIImage(named: datas.profileImage)!
         vc?.post_image = UIImage(named: datas.feedImages)!
-        self.navigationController?.pushViewController(vc!, animated: true)
+        self.navigationController?.pushViewController(vc!, animated: false)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count

@@ -13,18 +13,17 @@ class ChatPageViewController: UIViewController,UITableViewDataSource,UITableView
     
     let data:[Chat] = [
         Chat(username: "aryansingh_920", imageName: "profile", fullname: "Aryan Singh"),
+        Chat(username: "singh_920", imageName: "profile", fullname: "Aryan"),
         Chat(username: "aryansingh_920", imageName: "profile", fullname: "Aryan Singh"),
+        Chat(username: "singh_920", imageName: "profile", fullname: "Aryan"),
         Chat(username: "aryansingh_920", imageName: "profile", fullname: "Aryan Singh"),
-        Chat(username: "aryansingh_920", imageName: "profile", fullname: "Aryan Singh"),
-        Chat(username: "aryansingh_920", imageName: "profile", fullname: "Aryan Singh"),
-        Chat(username: "aryansingh_920", imageName: "profile", fullname: "Aryan Singh"),
+        Chat(username: "singh_920", imageName: "profile", fullname: "Aryan"),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title="Chat"
         table.dataSource = self
-
-        // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ChatingPageViewController") as? ChatingPageViewController
@@ -47,12 +46,3 @@ class ChatPageViewController: UIViewController,UITableViewDataSource,UITableView
     }
 
 }
-
-
-//extension ViewController : UITableViewDelegate{
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let vc = storyboard?.instantiateViewController(withIdentifier: "ChatingPageViewController") as? ChatingPageViewController{
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
-//    }
-//}
