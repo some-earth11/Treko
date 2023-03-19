@@ -923,7 +923,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1v9-mo-Y3Q">
                                                             <rect key="frame" x="211" y="0.0" width="219" height="44"/>
-                                                            <color key="backgroundColor" red="0.97816051136363635" green="0.97816051136363635" blue="0.97816051136363635" alpha="0.085264900662251661" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -962,6 +962,9 @@
                                                 <color key="tintColor" red="0.30196079609999998" green="0.66274511810000003" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" image="plus.square.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="sendBtnClicked:" destination="ohy-2g-5fK" eventType="touchUpInside" id="L5n-Xa-vLh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -985,6 +988,7 @@
                     <navigationItem key="navigationItem" id="iQC-i8-GZh"/>
                     <connections>
                         <outlet property="description_profile" destination="c3Z-bk-ENk" id="TqQ-Qf-iWj"/>
+                        <outlet property="messageTextField" destination="R8Y-HO-J29" id="5HW-zq-YBs"/>
                         <outlet property="profileImage" destination="bOm-52-23j" id="lGC-VQ-Suo"/>
                         <outlet property="table" destination="u5w-Dt-UUY" id="siD-Nx-FGO"/>
                     </connections>
@@ -1567,7 +1571,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poV-36-hIW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poV-36-hIW" userLabel="Send">
                                         <rect key="frame" x="377.66666666666669" y="0.0" width="52.333333333333314" height="34.333333333333336"/>
                                         <color key="tintColor" red="0.30196079609999998" green="0.66274511810000003" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>

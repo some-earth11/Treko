@@ -13,32 +13,13 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
     @IBOutlet var table: UITableView!
     @IBOutlet weak var description_profile: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet var messageTextField: UITextField!
     
     var profile_Image = UIImage()
     var profile_name = ""
     var profile_description = ""
     
-    let data:[Chats] = [
-    Chats(message: "HelloHelloHelloHelloHelloHelloHelloHelloHelloHello", send: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hello", send: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hello", send: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hello", send: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hello", send: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hello", send: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hello", send: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hello", send: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hello", send: true),
-    Chats(message: "Hi", recieve: true),
-    Chats(message: "Hi", recieve: true),
+    var data:[Chats] = [
     Chats(message: "Hello", send: true),
     Chats(message: "Hi", recieve: true),
     ]
@@ -47,10 +28,20 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         title = profile_name
-        print(data)
+//        print(data)
         description_profile.text = profile_description
         profileImage.image = profile_Image
     }
+    
+
+    
+    @IBAction func sendBtnClicked(_ sender: UIButton) {
+        data.append(Chats(message: messageTextField.text!,send: true))
+        messageTextField.text = ""
+//        print(data)
+        table.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -64,5 +55,7 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
         return cell
         
     }
+    
+
     
 }
