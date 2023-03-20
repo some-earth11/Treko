@@ -23,9 +23,11 @@ class ChattingPage_TableViewCell: UITableViewCell {
 
         if(send){
             message.textAlignment = NSTextAlignment.right
+//            message.backgroundColor = UIColor.blue
         }
         if(recieve){
             message.textAlignment = NSTextAlignment.left
+//            message.backgroundColor = UIColor.green
         }
 
     }

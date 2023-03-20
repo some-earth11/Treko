@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var postLabel: UILabel!
     @IBOutlet weak var followingLabel: UILabel!
     @IBOutlet weak var followersLabel: UILabel!
@@ -18,7 +18,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileDescription: UILabel!
     
     let userInstance = logged_in_user()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

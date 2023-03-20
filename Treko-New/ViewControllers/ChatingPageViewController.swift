@@ -9,7 +9,6 @@ import UIKit
 
 class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-
     @IBOutlet var table: UITableView!
     @IBOutlet weak var description_profile: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
@@ -23,7 +22,6 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
     
     var data:[Chats] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = profile_name
@@ -33,10 +31,10 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
         profileImage.image = profile_Image
     }
     
-
-    
     @IBAction func sendBtnClicked(_ sender: UIButton) {
-        data.append(Chats(message: messageTextField.text!,send: true))
+        if(messageTextField.text != ""){
+            data.append(Chats(message: messageTextField.text!,send: true,sender: sendRecvDetail(userName: userInstance.userDetails.userName, fullName: userInstance.userDetails.fullName)))
+        }
         messageTextField.text = ""
 
         table.reloadData()
@@ -55,7 +53,5 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
         return cell
         
     }
-    
-
     
 }

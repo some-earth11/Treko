@@ -13,12 +13,10 @@ struct logged_in_user{
     var userFeed:[Feed]!
     var userChats:[Chats]!
     
-    
     func userInitializer(post:[Posts]) -> User{
-        let user:User = User(userName: "aryansingh_920", fullName: "Aryan Singh", profilePicture: "profile", profileDescription: "Trekker", numberOfPosts: 123, numberOfFollowers: 604, numberOfFollowing: 19, posts: post)
+        let user:User = User(userName: "aryansingh_920", fullName: "Aryan Singh", profilePicture: "profile", profileDescription: "Trekker", numberOfPosts: 23, numberOfFollowers: 604, numberOfFollowing: 19, posts: post)
         return user
     }
-    
     
     func feedInitializer(user:User,postNumber:Int) -> [Feed] {
         var feed:[Feed] = []
@@ -35,21 +33,14 @@ struct logged_in_user{
         return chats
     }
     
-
-
-    
-    
     init() {
         let post:[Posts] = [Posts(images:"mountain1", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
                             Posts(images:"mountain2", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
                             Posts(images:"mountain3", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
                             Posts(images:"mountain4", numberOfComments: 97, numberOfLikes: 32, location: "Nepal")]
         
-        
         self.userDetails = userInitializer(post: post)
         self.userFeed = feedInitializer(user:self.userDetails,postNumber: post.count)
         self.userChats = chatInitializer(user: self.userDetails)
     }
 }
-
-let newUser = logged_in_user()
