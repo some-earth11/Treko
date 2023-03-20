@@ -8,7 +8,7 @@
 import Foundation
 
 struct Posts{
-    var images:[String];
+    var images:String;
     var numberOfComments:Int64;
     var numberOfLikes:Int64;
     var location:String;

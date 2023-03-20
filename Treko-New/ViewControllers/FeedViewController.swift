@@ -11,17 +11,14 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     @IBOutlet weak var table: UITableView!
     
-    let data:[Feed] = [
-        Feed(name: "Aryan Singh", location: "Nepal", feedImages: "mountain1", profileImage: "profile", numberOfComments: 97, numberOfLikes: 32),
-        Feed(name: "Aryan", location: "Nepal", feedImages: "mountain2", profileImage: "profile", numberOfComments: 65, numberOfLikes: 86),
-        Feed(name: "Aryan Singh", location: "Nepal", feedImages: "mountain3", profileImage: "profile", numberOfComments: 98, numberOfLikes: 42),
-        Feed(name: "Aryan", location: "Nepal", feedImages: "mountain4", profileImage: "profile", numberOfComments: 76, numberOfLikes: 21),
-        Feed(name: "Aryan Singh", location: "Nepal", feedImages: "mountain4", profileImage: "profile", numberOfComments: 54, numberOfLikes: 10)
-    ]
+    let userInstance = logged_in_user()
+
+    var data:[Feed] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Feed"
+        data = userInstance.userFeed
         table?.dataSource = self
 
     }

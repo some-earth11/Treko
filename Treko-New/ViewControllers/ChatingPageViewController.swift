@@ -19,16 +19,16 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
     var profile_name = ""
     var profile_description = ""
     
-    var data:[Chats] = [
-    Chats(message: "Hello", send: true),
-    Chats(message: "Hi", recieve: true),
-    ]
+    let userInstance = logged_in_user()
+    
+    var data:[Chats] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = profile_name
-//        print(data)
+
+        data = userInstance.userChats
         description_profile.text = profile_description
         profileImage.image = profile_Image
     }
@@ -38,7 +38,7 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
     @IBAction func sendBtnClicked(_ sender: UIButton) {
         data.append(Chats(message: messageTextField.text!,send: true))
         messageTextField.text = ""
-//        print(data)
+
         table.reloadData()
     }
     

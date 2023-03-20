@@ -16,21 +16,18 @@ class ChattingPage_TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-//        print(message.text ?? "",send,recieve)
+
         if(send){
             message.textAlignment = NSTextAlignment.right
         }
         if(recieve){
             message.textAlignment = NSTextAlignment.left
         }
-        // Configure the view for the selected state
+
     }
 
 }
