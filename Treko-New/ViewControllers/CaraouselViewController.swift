@@ -27,7 +27,6 @@ class CaraouselViewController: UIViewController,UITableViewDataSource {
         tableView.frame = view.bounds
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
