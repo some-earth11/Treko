@@ -7,7 +7,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -218,23 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="-529"/>
-        </scene>
-        <!--Buy-->
-        <scene sceneID="1uK-pH-1xW">
-            <objects>
-                <viewController id="ghE-5R-T0m" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eaK-qg-mcN">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="A8T-ad-f3w"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Buy" id="ko5-zX-wcf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="06J-4C-gAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5519" y="-709"/>
+            <point key="canvasLocation" x="2586" y="42"/>
         </scene>
         <!--Profile-->
         <scene sceneID="LWY-Y8-YNG">
@@ -726,7 +709,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymd-g7-yaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="339"/>
+            <point key="canvasLocation" x="2586" y="906"/>
         </scene>
         <!--Chat Page View Controller-->
         <scene sceneID="Hli-lI-Bkp">
@@ -758,7 +741,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mLB-Gu-MJh">
-                                <rect key="frame" x="0.0" y="183" width="430" height="666"/>
+                                <rect key="frame" x="0.0" y="183" width="430" height="715"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.30196079609999998" green="0.66274511810000003" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.30196079609999998" green="0.66274511810000003" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -843,7 +826,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSN-wG-bW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3917" y="422"/>
+            <point key="canvasLocation" x="5485" y="-1624"/>
         </scene>
         <!--Chating Page View Controller-->
         <scene sceneID="H23-pd-aSt">
@@ -995,72 +978,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsx-VO-Sef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4728.8372093023254" y="421.67381974248929"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="wMU-jB-VXy">
-            <objects>
-                <viewController id="rKn-0E-8qz" customClass="SampleViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MwZ-zi-qag">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LtB-UK-BMT">
-                                <rect key="frame" x="20" y="384.66666666666669" width="390" height="163.00000000000006"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="163" id="084-wc-k4u"/>
-                                    <constraint firstAttribute="width" constant="390" id="KBU-Hu-E3V"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q6x-LT-PPv">
-                                    <size key="itemSize" width="373" height="154"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="maz-mB-ZfQ" customClass="MyCollectionViewCell" customModule="Treko_New" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="163"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hnU-za-QUh">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="163"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain2" translatesAutoresizingMaskIntoConstraints="NO" id="Z5s-bC-lbC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="163"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Z5s-bC-lbC" secondAttribute="bottom" id="EUA-9E-cNs"/>
-                                                <constraint firstItem="Z5s-bC-lbC" firstAttribute="leading" secondItem="hnU-za-QUh" secondAttribute="leading" id="lmv-Gi-khg"/>
-                                                <constraint firstItem="Z5s-bC-lbC" firstAttribute="top" secondItem="hnU-za-QUh" secondAttribute="top" id="qlP-d2-Ri0"/>
-                                                <constraint firstAttribute="trailing" secondItem="Z5s-bC-lbC" secondAttribute="trailing" id="vW2-Dc-lnx"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="390" height="163"/>
-                                        <connections>
-                                            <outlet property="myImage" destination="Z5s-bC-lbC" id="TwQ-fR-zwx"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="7PJ-bK-gHq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="LtB-UK-BMT" firstAttribute="centerY" secondItem="MwZ-zi-qag" secondAttribute="centerY" id="h2e-BL-UKi"/>
-                            <constraint firstItem="LtB-UK-BMT" firstAttribute="centerX" secondItem="MwZ-zi-qag" secondAttribute="centerX" id="qwL-IC-QHE"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yQ5-FI-DdX"/>
-                    <connections>
-                        <outlet property="CollectionView" destination="LtB-UK-BMT" id="bge-19-PdF"/>
-                        <outlet property="collectionView" destination="LtB-UK-BMT" id="Rbk-Df-YOf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yJF-rr-r42" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1446.9767441860465" y="-1438.197424892704"/>
+            <point key="canvasLocation" x="5484" y="-796"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5Zi-4O-3Jy">
@@ -1083,22 +1001,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsE-x3-jJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2586" y="-1624"/>
-        </scene>
-        <!--caraousel-->
-        <scene sceneID="alE-aZ-RCf">
-            <objects>
-                <viewController id="QTd-uh-Ev8" customClass="CaraouselViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oSh-Fk-sGH">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="doZ-x2-14z"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="caraousel" id="dDM-B0-IL8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Dp-tE-8hE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4054" y="-2025"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="GsI-8z-eL2">
@@ -1465,7 +1367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eB-tm-pGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4200" y="-455"/>
+            <point key="canvasLocation" x="4587" y="-1624"/>
         </scene>
         <!--Chat-->
         <scene sceneID="M0q-gO-b3l">
@@ -1484,7 +1386,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5B-le-z2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2862" y="422"/>
+            <point key="canvasLocation" x="5484" y="-2450"/>
         </scene>
         <!--Post view View Controller-->
         <scene sceneID="N8X-So-0x7">
@@ -1609,7 +1511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S03-5o-nwY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3079.5348837209303" y="-455.15021459227472"/>
+            <point key="canvasLocation" x="4587" y="-796"/>
         </scene>
         <!--Feed-->
         <scene sceneID="W8A-ka-rqu">
@@ -1628,11 +1530,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxu-tG-Ndx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3687.9069767441861" y="-1185.1931330472103"/>
+            <point key="canvasLocation" x="3680" y="-1624"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="F4Y-4q-v42"/>
+        <segue reference="85u-0R-vjp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up.message" catalog="system" width="128" height="116"/>
@@ -1646,7 +1548,6 @@
         <image name="message.badge" catalog="system" width="128" height="116"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
         <image name="mountain1" width="2200" height="1469"/>
-        <image name="mountain2" width="1000" height="667"/>
         <image name="person.crop.rectangle.stack" catalog="system" width="128" height="122"/>
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>

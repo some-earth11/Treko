@@ -24,7 +24,6 @@ class ProfileViewController: UIViewController {
         title = "Profile"
         let loggedInUser = userInstance.userDetails
 
-        
         postLabel.text = String(loggedInUser!.numberOfPosts)
         followingLabel.text = String(loggedInUser!.numberOfFollowing)
         followersLabel.text = String(loggedInUser!.numberOfFollowers)
