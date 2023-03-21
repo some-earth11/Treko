@@ -23,7 +23,6 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row == 0){
-            
         }else{
             let vc = storyboard?.instantiateViewController(withIdentifier: "Post_viewViewController") as? Post_viewViewController
             let datas = data[indexPath.row]
@@ -38,7 +37,6 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
         return data.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print(indexPath.row)
         if(indexPath.row == 0){
             return 260
         };return 450
