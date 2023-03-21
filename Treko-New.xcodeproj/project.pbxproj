@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A08F69F29CA25E4001DDDB1 /* FeedTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A08F69E29CA25E4001DDDB1 /* FeedTopTableViewCell.swift */; };
 		3A128EFC29B6F6AD00A0EC1D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A128EFB29B6F6AD00A0EC1D /* Feed.swift */; };
 		3A128EFE29B6F8D800A0EC1D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A128EFD29B6F8D800A0EC1D /* Posts.swift */; };
 		3A64D20A29C2CFA900C135F6 /* ChattingPage_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A08F69E29CA25E4001DDDB1 /* FeedTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTopTableViewCell.swift; sourceTree = "<group>"; };
 		3A128EFB29B6F6AD00A0EC1D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		3A128EFD29B6F8D800A0EC1D /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPage_TableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3AACD58329BB068500B96F54 /* ChatTableViewCell.swift */,
+				3A08F69E29CA25E4001DDDB1 /* FeedTopTableViewCell.swift */,
 				3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */,
 				3AB2681D29BDBE44001926D5 /* FeedTableViewCell.swift */,
 			);
@@ -238,6 +241,7 @@
 				3AEF893129C231A70034B82E /* Post_viewViewController.swift in Sources */,
 				3A128EFE29B6F8D800A0EC1D /* Posts.swift in Sources */,
 				3AE1423F29B6FAB20054EF91 /* ProfileViewController.swift in Sources */,
+				3A08F69F29CA25E4001DDDB1 /* FeedTopTableViewCell.swift in Sources */,
 				3AE1424329B6FB190054EF91 /* User.swift in Sources */,
 				3AACD58429BB068500B96F54 /* ChatTableViewCell.swift in Sources */,
 				3A128EFC29B6F6AD00A0EC1D /* Feed.swift in Sources */,
