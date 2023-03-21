@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--About-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="184" translatesAutoresizingMaskIntoConstraints="NO" id="qqa-zn-mhX" userLabel="Top Stack View">
-                                <rect key="frame" x="0.0" y="59" width="430" height="80"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M0-La-0bb">
                                         <rect key="frame" x="0.0" y="23" width="94.666666666666671" height="34"/>
@@ -51,7 +51,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kod-Di-atz" userLabel="Top Button Stack View">
-                                <rect key="frame" x="0.0" y="219" width="430" height="34.333333333333343"/>
+                                <rect key="frame" x="0.0" y="219" width="430" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQw-CC-cdU">
                                         <rect key="frame" x="0.0" y="0.0" width="136.66666666666666" height="34.333333333333336"/>
@@ -209,7 +209,6 @@
                             <constraint firstItem="tVo-op-Pum" firstAttribute="top" secondItem="eoF-3u-U1R" secondAttribute="bottom" constant="190" id="wck-iM-8Zs"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="square.and.arrow.down.on.square.fill" catalog="system" id="wY7-He-dCH"/>
                     <navigationItem key="navigationItem" id="K92-ZT-2Lt"/>
                     <connections>
                         <outlet property="iCarouselView" destination="eoF-3u-U1R" id="1dV-mE-6Nx"/>
@@ -217,9 +216,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2586" y="42"/>
+            <point key="canvasLocation" x="4587" y="129"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="LWY-Y8-YNG">
             <objects>
                 <viewController id="QfA-ei-qJc" customClass="ProfileViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSl-Zn-fh8">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <rect key="frame" x="0.0" y="0.0" width="506" height="932"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="INz-Kp-AoS" userLabel="Scroll Stack View">
                                         <rect key="frame" x="5" y="0.0" width="496" height="1739"/>
@@ -695,7 +694,6 @@
                             <constraint firstAttribute="bottom" secondItem="qSl-Zn-fh8" secondAttribute="bottom" id="fcM-aB-onQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="folder" catalog="system" id="Y5Y-fU-G06"/>
                     <navigationItem key="navigationItem" id="68u-WP-duR"/>
                     <connections>
                         <outlet property="followersLabel" destination="Msh-sb-9cV" id="OCa-K3-fgu"/>
@@ -709,7 +707,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymd-g7-yaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2586" y="906"/>
+            <point key="canvasLocation" x="4587" y="950"/>
         </scene>
         <!--Chat Page View Controller-->
         <scene sceneID="Hli-lI-Bkp">
@@ -994,8 +992,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="gOt-if-Yf7" kind="relationship" relationship="viewControllers" id="HYQ-F7-Pxh"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IJQ-vJ-Msv"/>
-                        <segue destination="QfA-ei-qJc" kind="relationship" relationship="viewControllers" id="P2d-37-sZU"/>
+                        <segue destination="ATH-3p-XMh" kind="relationship" relationship="viewControllers" id="IJQ-vJ-Msv"/>
+                        <segue destination="gxJ-yI-nb0" kind="relationship" relationship="viewControllers" id="P2d-37-sZU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsE-x3-jJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1531,6 +1529,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxu-tG-Ndx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3680" y="-1624"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="2ML-eR-C3g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ATH-3p-XMh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="square.and.arrow.down.on.square.fill" catalog="system" id="wY7-He-dCH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MRS-yv-dtL">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="seZ-Gi-d39"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ouv-aU-aNI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3680" y="129"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="2IP-q6-nnu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gxJ-yI-nb0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="folder" catalog="system" id="Y5Y-fU-G06"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9qk-1x-1UK">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QfA-ei-qJc" kind="relationship" relationship="rootViewController" id="E5c-zD-dCQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAX-WQ-A2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3680" y="950"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
