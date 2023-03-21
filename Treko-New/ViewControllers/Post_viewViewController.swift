@@ -7,8 +7,15 @@
 
 import UIKit
 
-class Post_viewViewController: UIViewController {
+class Post_viewViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    let data:[PostViewFeed] = [
+        PostViewFeed(image: "profile", comment: "Awesome"),
+        PostViewFeed(image: "profile", comment: "Awesome"),
+        PostViewFeed(image: "profile", comment: "Awesome"),
+        PostViewFeed(image: "profile", comment: "Awesome")]
+
+    @IBOutlet weak var table: UITableView!
     @IBOutlet var postImage: UIImageView!
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var locationLabel: UILabel!
@@ -26,5 +33,17 @@ class Post_viewViewController: UIViewController {
         profileImage.image = profile_image
         locationLabel.text = location_label
         nameLabel.text = name_label
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let datas = data[indexPath.row]
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CommentTableViewCell
+        cell.imageLabel.image = UIImage(named: datas.image)
+        cell.label.text = datas.comment
+        return cell
     }
 }
