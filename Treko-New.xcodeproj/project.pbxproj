@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A08F69F29CA25E4001DDDB1 /* FeedTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A08F69E29CA25E4001DDDB1 /* FeedTopTableViewCell.swift */; };
+		3A128EFC29B6F6AD00A0EC1D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A128EFB29B6F6AD00A0EC1D /* Feed.swift */; };
+		3A128EFE29B6F8D800A0EC1D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A128EFD29B6F8D800A0EC1D /* Posts.swift */; };
+		3A34AC3A29CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34AC3929CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift */; };
+		3A34AC3C29CA5E4700AF4B71 /* ExplorePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */; };
+		3A34AC3E29CA6A5900AF4B71 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34AC3D29CA6A5900AF4B71 /* CommentTableViewCell.swift */; };
+		3A34AC4029CA6BE800AF4B71 /* PostViewFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34AC3F29CA6BE800AF4B71 /* PostViewFeed.swift */; };
+		3A64D20A29C2CFA900C135F6 /* ChattingPage_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */; };
+		3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */; };
+		3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147729B07E1D00D1D9CB /* AppDelegate.swift */; };
+		3A82147A29B07E1D00D1D9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */; };
+		3A82147C29B07E1D00D1D9CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147B29B07E1D00D1D9CB /* ViewController.swift */; };
+		3A82147F29B07E1D00D1D9CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A82147D29B07E1D00D1D9CB /* Main.storyboard */; };
+		3A82148129B07E1E00D1D9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A82148029B07E1E00D1D9CB /* Assets.xcassets */; };
+		3A82148429B07E1E00D1D9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A82148229B07E1E00D1D9CB /* LaunchScreen.storyboard */; };
+		3AACD58129BA65A600B96F54 /* ChatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */; };
+		3AACD58429BB068500B96F54 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACD58329BB068500B96F54 /* ChatTableViewCell.swift */; };
+		3AACD58629BB07DB00B96F54 /* ChatPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACD58529BB07DB00B96F54 /* ChatPage.swift */; };
+		3AB2681C29BDB457001926D5 /* ChatingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB2681B29BDB457001926D5 /* ChatingPageViewController.swift */; };
+		3AB2681E29BDBE44001926D5 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB2681D29BDBE44001926D5 /* FeedTableViewCell.swift */; };
+		3AE1423F29B6FAB20054EF91 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1423E29B6FAB20054EF91 /* ProfileViewController.swift */; };
+		3AE1424129B6FACC0054EF91 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1424029B6FACC0054EF91 /* FeedViewController.swift */; };
+		3AE1424329B6FB190054EF91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1424229B6FB190054EF91 /* User.swift */; };
+		3AE1424529B6FE100054EF91 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1424429B6FE100054EF91 /* Stories.swift */; };
+		3AEF893129C231A70034B82E /* Post_viewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF893029C231A70034B82E /* Post_viewViewController.swift */; };
+		3AF80BB029C8776200E46C47 /* UserLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF80BAF29C8776200E46C47 /* UserLoggedIn.swift */; };
+		9939109B29CB0D7A0097E2A5 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939109A29CB0D7A0097E2A5 /* OnboardingSlide.swift */; };
+		9939109D29CB0DE40097E2A5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */; };
+		9939109F29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939109E29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A08F69E29CA25E4001DDDB1 /* FeedTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTopTableViewCell.swift; sourceTree = "<group>"; };
+		3A128EFB29B6F6AD00A0EC1D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		3A128EFD29B6F8D800A0EC1D /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		3A34AC3929CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePageCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePageViewController.swift; sourceTree = "<group>"; };
+		3A34AC3D29CA6A5900AF4B71 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		3A34AC3F29CA6BE800AF4B71 /* PostViewFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewFeed.swift; sourceTree = "<group>"; };
+		3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPage_TableViewCell.swift; sourceTree = "<group>"; };
+		3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraouselViewController.swift; sourceTree = "<group>"; };
+		3A82147429B07E1D00D1D9CB /* Treko-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treko-New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A82147729B07E1D00D1D9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3A82147B29B07E1D00D1D9CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A82147E29B07E1D00D1D9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A82148029B07E1E00D1D9CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A82148329B07E1E00D1D9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A82148529B07E1E00D1D9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageViewController.swift; sourceTree = "<group>"; };
+		3AACD58329BB068500B96F54 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		3AACD58529BB07DB00B96F54 /* ChatPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPage.swift; sourceTree = "<group>"; };
+		3AB2681B29BDB457001926D5 /* ChatingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatingPageViewController.swift; sourceTree = "<group>"; };
+		3AB2681D29BDBE44001926D5 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		3AE1423E29B6FAB20054EF91 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3AE1424029B6FACC0054EF91 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		3AE1424229B6FB190054EF91 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3AE1424429B6FE100054EF91 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		3AEF893029C231A70034B82E /* Post_viewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_viewViewController.swift; sourceTree = "<group>"; };
+		3AF80BAF29C8776200E46C47 /* UserLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoggedIn.swift; sourceTree = "<group>"; };
+		9939109A29CB0D7A0097E2A5 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		9939109E29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A82147129B07E1D00D1D9CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A128EFA29B6F64600A0EC1D /* DataStructs */ = {
+			isa = PBXGroup;
+			children = (
+				3A128EFB29B6F6AD00A0EC1D /* Feed.swift */,
+				3AACD58529BB07DB00B96F54 /* ChatPage.swift */,
+				3A34AC3F29CA6BE800AF4B71 /* PostViewFeed.swift */,
+				3A128EFD29B6F8D800A0EC1D /* Posts.swift */,
+				3AE1424429B6FE100054EF91 /* Stories.swift */,
+				3AE1424229B6FB190054EF91 /* User.swift */,
+				9939109A29CB0D7A0097E2A5 /* OnboardingSlide.swift */,
+			);
+			path = DataStructs;
+			sourceTree = "<group>";
+		};
+		3A128EFF29B6F90D00A0EC1D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AE1423E29B6FAB20054EF91 /* ProfileViewController.swift */,
+				3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */,
+				3AB2681B29BDB457001926D5 /* ChatingPageViewController.swift */,
+				3AEF893029C231A70034B82E /* Post_viewViewController.swift */,
+				3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */,
+				3AE1424029B6FACC0054EF91 /* FeedViewController.swift */,
+				3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */,
+				9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3A34AC3829CA5DC300AF4B71 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3A34AC3929CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift */,
+				9939109E29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		3A82146B29B07E1D00D1D9CB = {
+			isa = PBXGroup;
+			children = (
+				3A82147629B07E1D00D1D9CB /* Treko-New */,
+				3A82147529B07E1D00D1D9CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A82147529B07E1D00D1D9CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A82147429B07E1D00D1D9CB /* Treko-New.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A82147629B07E1D00D1D9CB /* Treko-New */ = {
+			isa = PBXGroup;
+			children = (
+				3A82147729B07E1D00D1D9CB /* AppDelegate.swift */,
+				3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */,
+				3A128EFA29B6F64600A0EC1D /* DataStructs */,
+				3A82147B29B07E1D00D1D9CB /* ViewController.swift */,
+				3AF80BAE29C8771200E46C47 /* Service */,
+				3A82147D29B07E1D00D1D9CB /* Main.storyboard */,
+				3A128EFF29B6F90D00A0EC1D /* ViewControllers */,
+				3A82148029B07E1E00D1D9CB /* Assets.xcassets */,
+				3AACD58229BB065400B96F54 /* TableView */,
+				3A82148229B07E1E00D1D9CB /* LaunchScreen.storyboard */,
+				3A82148529B07E1E00D1D9CB /* Info.plist */,
+				3A34AC3829CA5DC300AF4B71 /* CollectionView */,
+			);
+			path = "Treko-New";
+			sourceTree = "<group>";
+		};
+		3AACD58229BB065400B96F54 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				3AACD58329BB068500B96F54 /* ChatTableViewCell.swift */,
+				3A34AC3D29CA6A5900AF4B71 /* CommentTableViewCell.swift */,
+				3A08F69E29CA25E4001DDDB1 /* FeedTopTableViewCell.swift */,
+				3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */,
+				3AB2681D29BDBE44001926D5 /* FeedTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		3AF80BAE29C8771200E46C47 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3AF80BAF29C8776200E46C47 /* UserLoggedIn.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A82147329B07E1D00D1D9CB /* Treko-New */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A82148829B07E1E00D1D9CB /* Build configuration list for PBXNativeTarget "Treko-New" */;
+			buildPhases = (
+				3A82147029B07E1D00D1D9CB /* Sources */,
+				3A82147129B07E1D00D1D9CB /* Frameworks */,
+				3A82147229B07E1D00D1D9CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Treko-New";
+			productName = "Treko-New";
+			productReference = 3A82147429B07E1D00D1D9CB /* Treko-New.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A82146C29B07E1D00D1D9CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3A82147329B07E1D00D1D9CB = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+				};
+			};
+			buildConfigurationList = 3A82146F29B07E1D00D1D9CB /* Build configuration list for PBXProject "Treko-New" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A82146B29B07E1D00D1D9CB;
+			productRefGroup = 3A82147529B07E1D00D1D9CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A82147329B07E1D00D1D9CB /* Treko-New */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A82147229B07E1D00D1D9CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A82148429B07E1E00D1D9CB /* LaunchScreen.storyboard in Resources */,
+				3A82148129B07E1E00D1D9CB /* Assets.xcassets in Resources */,
+				3A82147F29B07E1D00D1D9CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A82147029B07E1D00D1D9CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A82147C29B07E1D00D1D9CB /* ViewController.swift in Sources */,
+				3AB2681C29BDB457001926D5 /* ChatingPageViewController.swift in Sources */,
+				3AE1424129B6FACC0054EF91 /* FeedViewController.swift in Sources */,
+				3A34AC3C29CA5E4700AF4B71 /* ExplorePageViewController.swift in Sources */,
+				9939109B29CB0D7A0097E2A5 /* OnboardingSlide.swift in Sources */,
+				3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */,
+				3AE1424529B6FE100054EF91 /* Stories.swift in Sources */,
+				3A82147A29B07E1D00D1D9CB /* SceneDelegate.swift in Sources */,
+				3AACD58129BA65A600B96F54 /* ChatPageViewController.swift in Sources */,
+				3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */,
+				3AB2681E29BDBE44001926D5 /* FeedTableViewCell.swift in Sources */,
+				3A34AC4029CA6BE800AF4B71 /* PostViewFeed.swift in Sources */,
+				9939109D29CB0DE40097E2A5 /* OnboardingViewController.swift in Sources */,
+				9939109F29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift in Sources */,
+				3A64D20A29C2CFA900C135F6 /* ChattingPage_TableViewCell.swift in Sources */,
+				3A34AC3E29CA6A5900AF4B71 /* CommentTableViewCell.swift in Sources */,
+				3AACD58629BB07DB00B96F54 /* ChatPage.swift in Sources */,
+				3AEF893129C231A70034B82E /* Post_viewViewController.swift in Sources */,
+				3A34AC3A29CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift in Sources */,
+				3A128EFE29B6F8D800A0EC1D /* Posts.swift in Sources */,
+				3AE1423F29B6FAB20054EF91 /* ProfileViewController.swift in Sources */,
+				3A08F69F29CA25E4001DDDB1 /* FeedTopTableViewCell.swift in Sources */,
+				3AE1424329B6FB190054EF91 /* User.swift in Sources */,
+				3AACD58429BB068500B96F54 /* ChatTableViewCell.swift in Sources */,
+				3A128EFC29B6F6AD00A0EC1D /* Feed.swift in Sources */,
+				3AF80BB029C8776200E46C47 /* UserLoggedIn.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A82147D29B07E1D00D1D9CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A82147E29B07E1D00D1D9CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A82148229B07E1E00D1D9CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A82148329B07E1E00D1D9CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A82148629B07E1E00D1D9CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A82148729B07E1E00D1D9CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A82148929B07E1E00D1D9CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FKQ6M8JA2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Treko-New/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "axone125.Treko-New";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Treko-New/Treko-New-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A82148A29B07E1E00D1D9CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FKQ6M8JA2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Treko-New/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "axone125.Treko-New";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Treko-New/Treko-New-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A82146F29B07E1D00D1D9CB /* Build configuration list for PBXProject "Treko-New" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A82148629B07E1E00D1D9CB /* Debug */,
+				3A82148729B07E1E00D1D9CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A82148829B07E1E00D1D9CB /* Build configuration list for PBXNativeTarget "Treko-New" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A82148929B07E1E00D1D9CB /* Debug */,
+				3A82148A29B07E1E00D1D9CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A82146C29B07E1D00D1D9CB /* Project object */;
+}
