@@ -33,6 +33,9 @@
 		3AE1424529B6FE100054EF91 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1424429B6FE100054EF91 /* Stories.swift */; };
 		3AEF893129C231A70034B82E /* Post_viewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF893029C231A70034B82E /* Post_viewViewController.swift */; };
 		3AF80BB029C8776200E46C47 /* UserLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF80BAF29C8776200E46C47 /* UserLoggedIn.swift */; };
+		9939109B29CB0D7A0097E2A5 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939109A29CB0D7A0097E2A5 /* OnboardingSlide.swift */; };
+		9939109D29CB0DE40097E2A5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */; };
+		9939109F29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939109E29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		3AE1424429B6FE100054EF91 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		3AEF893029C231A70034B82E /* Post_viewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_viewViewController.swift; sourceTree = "<group>"; };
 		3AF80BAF29C8776200E46C47 /* UserLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoggedIn.swift; sourceTree = "<group>"; };
+		9939109A29CB0D7A0097E2A5 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		9939109E29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 				3A128EFD29B6F8D800A0EC1D /* Posts.swift */,
 				3AE1424429B6FE100054EF91 /* Stories.swift */,
 				3AE1424229B6FB190054EF91 /* User.swift */,
+				9939109A29CB0D7A0097E2A5 /* OnboardingSlide.swift */,
 			);
 			path = DataStructs;
 			sourceTree = "<group>";
@@ -100,6 +107,7 @@
 				3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */,
 				3AE1424029B6FACC0054EF91 /* FeedViewController.swift */,
 				3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */,
+				9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3A34AC3929CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift */,
+				9939109E29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -243,6 +252,7 @@
 				3AB2681C29BDB457001926D5 /* ChatingPageViewController.swift in Sources */,
 				3AE1424129B6FACC0054EF91 /* FeedViewController.swift in Sources */,
 				3A34AC3C29CA5E4700AF4B71 /* ExplorePageViewController.swift in Sources */,
+				9939109B29CB0D7A0097E2A5 /* OnboardingSlide.swift in Sources */,
 				3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */,
 				3AE1424529B6FE100054EF91 /* Stories.swift in Sources */,
 				3A82147A29B07E1D00D1D9CB /* SceneDelegate.swift in Sources */,
@@ -250,6 +260,8 @@
 				3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */,
 				3AB2681E29BDBE44001926D5 /* FeedTableViewCell.swift in Sources */,
 				3A34AC4029CA6BE800AF4B71 /* PostViewFeed.swift in Sources */,
+				9939109D29CB0DE40097E2A5 /* OnboardingViewController.swift in Sources */,
+				9939109F29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift in Sources */,
 				3A64D20A29C2CFA900C135F6 /* ChattingPage_TableViewCell.swift in Sources */,
 				3A34AC3E29CA6A5900AF4B71 /* CommentTableViewCell.swift in Sources */,
 				3AACD58629BB07DB00B96F54 /* ChatPage.swift in Sources */,
