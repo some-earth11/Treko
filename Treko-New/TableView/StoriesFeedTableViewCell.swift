@@ -38,11 +38,11 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
             cell.imagesView.clipsToBounds = true
             cell.imagesView.contentMode = UIView.ContentMode.scaleAspectFit
         }
-        if(true){
-            cell.layer.borderColor = UIColor.lightGray.cgColor
-            cell.layer.borderWidth = 0.8
-            cell.isSelected = true
-        }
+
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 0.8
+        cell.isSelected = true
+
         cell.imagesView.image = UIImage(named: arrData[indexPath.row])
         return cell
     }
