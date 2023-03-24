@@ -22,8 +22,11 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
         table?.dataSource = self
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(indexPath.row == 0){
-        }else{
+        switch(indexPath.row){
+        case 0...1:
+            print("First Two cells Selected")
+            break;
+        default:
             let vc = storyboard?.instantiateViewController(withIdentifier: "Post_viewViewController") as? Post_viewViewController
             let datas = data[indexPath.row]
             vc?.name_label = datas.name
@@ -31,23 +34,45 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
             vc?.profile_image = UIImage(named: datas.profileImage)!
             vc?.post_image = UIImage(named: datas.feedImages)!
             self.navigationController?.pushViewController(vc!, animated: true)
+            break;
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(indexPath.row == 0){
-            return 260
-        };return 450
+        switch(indexPath.row){
+        case 0:
+            return 50
+        case 1:
+            return 180
+        default:
+            return 450;
+        }
+
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let datas = data[indexPath.row]
-        if(indexPath.row == 0 ){
+        switch(indexPath.row){
+        case 0:
             let cell = table.dequeueReusableCell(withIdentifier: "cellTop", for: indexPath) as! FeedTopTableViewCell
             cell.TrekoLabel.text = "Treko"
+            cell.layer.shadowOffset = CGSizeMake(0, 0)
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 0.23
+            cell.layer.shadowRadius = 4
+            cell.isSelected = true
             return cell
-        }else{
+        case 1:
+            let cell = table.dequeueReusableCell(withIdentifier: "cellStory", for: indexPath) as! StoriesFeedTableViewCell
+            cell.collectionView.tag = indexPath.section
+            cell.layer.shadowOffset = CGSizeMake(0, 0)
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOpacity = 0.23
+            cell.layer.shadowRadius = 4
+            cell.isSelected = true
+            return cell
+        default:
             let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
             cell.noOfLikesLabel.text = String(datas.numberOfLikes)+" Likes"
             cell.noOfCommentsLabel.text = String(datas.numberOfComments)+" Comments"
@@ -55,6 +80,9 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
             cell.profileImage.image = UIImage(named: datas.profileImage)
             cell.locationLabel.text = datas.location
             cell.nameLabel.text = datas.name
+            cell.layer.borderColor = UIColor.lightGray.cgColor
+            cell.layer.borderWidth = 0.3
+            cell.isSelected = true
             return cell
         }
     }

@@ -14,12 +14,7 @@ class Post_viewViewController: UIViewController,UITableViewDelegate,UITableViewD
         PostViewFeed(image: "profile", comment: "Awesome"),
         PostViewFeed(image: "profile", comment: "Awesome"),
         PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),        PostViewFeed(image: "profile", comment: "Awesome"),
+        PostViewFeed(image: "profile", comment: "Awesome"),     
         PostViewFeed(image: "profile", comment: "Awesome"),
         PostViewFeed(image: "profile", comment: "Awesome"),
         PostViewFeed(image: "profile", comment: "Awesome")]

@@ -22,12 +22,14 @@ struct logged_in_user {
   }
 
   func feedInitializer(user: User, postNumber: Int) -> [Feed] {
-    var feed: [Feed] = [
-      Feed(
+      let feedBase:Feed = Feed(
         name: "", location: "", feedImages: "", profileImage: "", numberOfComments: 0,
         numberOfLikes: 0)
+    var feed: [Feed] = [
+      
     ] // default feed array for top value
-
+      feed.append(feedBase)
+      feed.append(feedBase)
     for index in 0...postNumber - 1 {
       feed.append(
         Feed(
@@ -54,7 +56,11 @@ struct logged_in_user {
       Posts(images: "mountain1", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
       Posts(images: "mountain2", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
       Posts(images: "mountain3", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
-      Posts(images: "mountain4", numberOfComments: 97, numberOfLikes: 32, location: "Nepal")
+      Posts(images: "mountain4", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
+      Posts(images: "mountain1", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
+      Posts(images: "mountain2", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
+      Posts(images: "mountain3", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
+      Posts(images: "mountain4", numberOfComments: 97, numberOfLikes: 32, location: "Nepal"),
     ]
 
     self.userDetails = userInitializer(post: post)
