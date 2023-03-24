@@ -37,6 +37,9 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
         if(indexPath.row == 0){
             cell.imagesView.clipsToBounds = true
             cell.imagesView.contentMode = UIView.ContentMode.scaleAspectFit
+        }else{
+            cell.imagesView.clipsToBounds = true
+            cell.imagesView.contentMode = UIView.ContentMode.scaleToFill
         }
 
         cell.layer.borderColor = UIColor.lightGray.cgColor
