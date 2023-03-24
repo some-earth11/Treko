@@ -12,7 +12,7 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
     
     @IBOutlet var collectionView: UICollectionView!
     
-    var arrData = ["uploadPlus","image_story","image_story","image_story","image_story","image_story","image_story"]
+    var arrData = ["uploadPlus","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
