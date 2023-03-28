@@ -14,9 +14,16 @@ struct logged_in_user {
   var userChats: [Chats]!
 
   func userInitializer(post: [Posts]) -> User {
-      
-      let arrDataF = [storiesView(imageName: "uploadPlus", imageTitle: "upload"),storiesView(imageName: "image_story", imageTitle: "story"),storiesView(imageName: "image_story", imageTitle: "story"),storiesView(imageName: "image_story", imageTitle: "story"),storiesView(imageName: "image_story", imageTitle: "story"),storiesView(imageName: "image_story", imageTitle: "story")]
-      
+
+    let arrDataF = [
+      storiesView(imageName: "uploadPlus", imageTitle: "upload"),
+      storiesView(imageName: "image_story", imageTitle: "story"),
+      storiesView(imageName: "image_story", imageTitle: "story"),
+      storiesView(imageName: "image_story", imageTitle: "story"),
+      storiesView(imageName: "image_story", imageTitle: "story"),
+      storiesView(imageName: "image_story", imageTitle: "story"),
+    ]
+
     let user: User = User(
       userName: "aryansingh_920", fullName: "Aryan Singh", profilePicture: "profile",
       profileDescription: "Trekker", numberOfPosts: 23, numberOfFollowers: 604,
@@ -25,14 +32,12 @@ struct logged_in_user {
   }
 
   func feedInitializer(user: User, postNumber: Int) -> [Feed] {
-      let feedBase:Feed = Feed(
-        name: "", location: "", feedImages: "", profileImage: "", numberOfComments: 0,
-        numberOfLikes: 0)
-    var feed: [Feed] = [
-      
-    ] // default feed array for top value
-      feed.append(feedBase)
-      feed.append(feedBase)
+    let feedBase: Feed = Feed(
+      name: "", location: "", feedImages: "", profileImage: "", numberOfComments: 0,
+      numberOfLikes: 0)
+    var feed: [Feed] = []  // default feed array for top value
+    feed.append(feedBase)
+    feed.append(feedBase)
     for index in 0...postNumber - 1 {
       feed.append(
         Feed(
@@ -71,4 +76,3 @@ struct logged_in_user {
     self.userChats = chatInitializer(user: self.userDetails)
   }
 }
-
