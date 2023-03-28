@@ -9,16 +9,10 @@ import UIKit
 
 class Post_viewViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    let data:[PostViewFeed] = [
-        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),     
-        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome"),
-        PostViewFeed(image: "profile", comment: "Awesome")]
 
+    
+    let userInstance = logged_in_user()
+    var data:[PostViewFeedComment] = []
     @IBOutlet weak var table: UITableView!
     @IBOutlet var postImage: UIImageView!
     @IBOutlet var profileImage: UIImageView!
@@ -37,6 +31,7 @@ class Post_viewViewController: UIViewController,UITableViewDelegate,UITableViewD
         profileImage.image = profile_image
         locationLabel.text = location_label
         nameLabel.text = name_label
+        data = userInstance.userFeed[0].comments["0"]!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +41,7 @@ class Post_viewViewController: UIViewController,UITableViewDelegate,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let datas = data[indexPath.row]
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CommentTableViewCell
-        cell.imageLabel.image = UIImage(named: datas.image)
+        cell.imageLabel.image = UIImage(named: datas.userimage)
         cell.label.text = datas.comment
         return cell
     }

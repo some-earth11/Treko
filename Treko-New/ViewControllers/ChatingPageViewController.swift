@@ -26,14 +26,14 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
         super.viewDidLoad()
         title = profile_name
 
-        data = userInstance.userChats
+        data = userInstance.userDetails.chats[profile_name]!.chatMessages
         description_profile.text = profile_description
         profileImage.image = profile_Image
     }
     
     @IBAction func sendBtnClicked(_ sender: UIButton) {
         if(messageTextField.text != ""){
-            data.append(Chats(message: messageTextField.text!,send: true,sender: sendRecvDetail(userName: userInstance.userDetails.userName, fullName: userInstance.userDetails.fullName)))
+            data.append(Chats(message: messageTextField.text!,send: true))
         }
         messageTextField.text = ""
 
