@@ -14,10 +14,13 @@ struct logged_in_user {
   var userChats: [Chats]!
 
   func userInitializer(post: [Posts]) -> User {
+      
+      let arrDataF = [storiesView(imageName: "uploadPlus", imageTitle: "upload"),storiesView(imageName: "image_story", imageTitle: "story"),storiesView(imageName: "image_story", imageTitle: "story"),storiesView(imageName: "image_story", imageTitle: "story"),storiesView(imageName: "image_story", imageTitle: "story"),storiesView(imageName: "image_story", imageTitle: "story")]
+      
     let user: User = User(
       userName: "aryansingh_920", fullName: "Aryan Singh", profilePicture: "profile",
       profileDescription: "Trekker", numberOfPosts: 23, numberOfFollowers: 604,
-      numberOfFollowing: 19, posts: post)
+      numberOfFollowing: 19, posts: post, stories: arrDataF)
     return user
   }
 

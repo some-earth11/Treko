@@ -7,7 +7,3 @@
 
 import Foundation
 
-struct PostViewFeed{
-    var image:String
-    var comment:String
-}

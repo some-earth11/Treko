@@ -7,7 +7,4 @@
 
 import Foundation
 
-struct Story{
-    var image:String;
-    var storyTitle:String;
-}
+

@@ -12,13 +12,16 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
     
     @IBOutlet var collectionView: UICollectionView!
     
-    var arrData = ["uploadPlus","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story","image_story"]
+    let userInstance = logged_in_user()
+    var arrDataF:[storiesView] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate = self
         collectionView.dataSource = self
+        let loggedInUser = userInstance.userDetails
         // Initialization code
+        arrDataF = loggedInUser!.stories
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,7 +31,7 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrData.count
+        return arrDataF.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -46,13 +49,16 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
         cell.layer.borderWidth = 0.8
         cell.isSelected = true
 
-        cell.imagesView.image = UIImage(named: arrData[indexPath.row])
+        cell.imagesView.image = UIImage(named: arrDataF[indexPath.row].imageName)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionWidth = collectionView.bounds.width
         let collectionHeight = collectionView.bounds.height
         return CGSize(width: collectionWidth/5, height: collectionHeight)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 
 }
