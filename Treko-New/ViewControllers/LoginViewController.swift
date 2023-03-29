@@ -22,6 +22,13 @@ class LoginViewController: UIViewController {
         if(username.text != "" && password.text != ""){
             let response: () = apiCall.Login(username: username.text!, password: password.text!)
             print(response)
+            
+            
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
+
+                self.navigationController?.pushViewController(nextViewController, animated: true)
         }else{
             print("Empty field")
         }
