@@ -13,6 +13,8 @@
 		3A34AC3A29CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34AC3929CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift */; };
 		3A34AC3C29CA5E4700AF4B71 /* ExplorePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */; };
 		3A34AC3E29CA6A5900AF4B71 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34AC3D29CA6A5900AF4B71 /* CommentTableViewCell.swift */; };
+		3A3DC96329D43AA2000E859E /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DC96229D43AA2000E859E /* APICalls.swift */; };
+		3A3DC96529D44213000E859E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DC96429D44213000E859E /* LoginViewController.swift */; };
 		3A64D20A29C2CFA900C135F6 /* ChattingPage_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */; };
 		3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */; };
 		3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147729B07E1D00D1D9CB /* AppDelegate.swift */; };
@@ -41,6 +43,8 @@
 		3A34AC3929CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePageCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePageViewController.swift; sourceTree = "<group>"; };
 		3A34AC3D29CA6A5900AF4B71 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		3A3DC96229D43AA2000E859E /* APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
+		3A3DC96429D44213000E859E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPage_TableViewCell.swift; sourceTree = "<group>"; };
 		3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraouselViewController.swift; sourceTree = "<group>"; };
 		3A82147429B07E1D00D1D9CB /* Treko-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treko-New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,7 @@
 				3AE1423E29B6FAB20054EF91 /* ProfileViewController.swift */,
 				3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */,
 				3AB2681B29BDB457001926D5 /* ChatingPageViewController.swift */,
+				3A3DC96429D44213000E859E /* LoginViewController.swift */,
 				3AEF893029C231A70034B82E /* Post_viewViewController.swift */,
 				3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */,
 				3AE1424029B6FACC0054EF91 /* FeedViewController.swift */,
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				3AF80BAF29C8776200E46C47 /* UserLoggedIn.swift */,
+				3A3DC96229D43AA2000E859E /* APICalls.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -247,6 +253,8 @@
 				3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */,
 				3AB2681E29BDBE44001926D5 /* FeedTableViewCell.swift in Sources */,
 				3A0B2A3F29CDA5B200A02EFB /* StoriesFeedTableViewCell.swift in Sources */,
+				3A3DC96329D43AA2000E859E /* APICalls.swift in Sources */,
+				3A3DC96529D44213000E859E /* LoginViewController.swift in Sources */,
 				9939109D29CB0DE40097E2A5 /* OnboardingViewController.swift in Sources */,
 				3A0B2A4129CDA72B00A02EFB /* StoriesFeedCollectionViewCell.swift in Sources */,
 				9939109F29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift in Sources */,

@@ -68,6 +68,8 @@ struct logged_in_user {
   }
 
   init() {
+      
+      API().Login(username: "aryansingh_20",password: "1234578")
 
     let post: [Posts] = [
       Posts(
