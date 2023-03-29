@@ -9,7 +9,7 @@ import Foundation
 
 struct API{
     let urlS = "https://ff3c-2401-4900-1cd4-aa34-d83c-de52-e12-4d0e.in.ngrok.io/app"
-    let defaults = UserDefaults.standard
+//    let defaults = UserDefaults.standard
     
     
     func POST(parameters:[AnyHashable:Any],route:String){
@@ -39,7 +39,7 @@ struct API{
             
             if response.statusCode == 200 {
                 // handle successful response
-                defaults.set(true, forKey: "loggedIn")
+//                defaults.set(true, forKey: "loggedIn")
                 print("Success")
                 return
             } else {
@@ -58,7 +58,7 @@ struct API{
             "password":password
         ]
         
-        self.POST(parameters: parameters, route: "/login")
+        POST(parameters: parameters, route: "/login")
 
     }
 }
