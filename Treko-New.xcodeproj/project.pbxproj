@@ -34,6 +34,8 @@
 		3AF80BB029C8776200E46C47 /* UserLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF80BAF29C8776200E46C47 /* UserLoggedIn.swift */; };
 		9939109D29CB0DE40097E2A5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */; };
 		9939109F29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939109E29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift */; };
+		993E09DA29D54D3C0066B57B /* TrekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993E09D929D54D3C0066B57B /* TrekViewController.swift */; };
+		993E09DC29D5592E0066B57B /* TrekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993E09DB29D5592E0066B57B /* TrekCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		3AF80BAF29C8776200E46C47 /* UserLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoggedIn.swift; sourceTree = "<group>"; };
 		9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9939109E29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		993E09D929D54D3C0066B57B /* TrekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekViewController.swift; sourceTree = "<group>"; };
+		993E09DB29D5592E0066B57B /* TrekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 				3AE1424029B6FACC0054EF91 /* FeedViewController.swift */,
 				3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */,
 				9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */,
+				993E09D929D54D3C0066B57B /* TrekViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 				3A34AC3929CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift */,
 				9939109E29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift */,
 				3A0B2A4029CDA72B00A02EFB /* StoriesFeedCollectionViewCell.swift */,
+				993E09DB29D5592E0066B57B /* TrekCollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -257,12 +263,14 @@
 				3A3DC96529D44213000E859E /* LoginViewController.swift in Sources */,
 				9939109D29CB0DE40097E2A5 /* OnboardingViewController.swift in Sources */,
 				3A0B2A4129CDA72B00A02EFB /* StoriesFeedCollectionViewCell.swift in Sources */,
+				993E09DA29D54D3C0066B57B /* TrekViewController.swift in Sources */,
 				9939109F29CB0E480097E2A5 /* OnboardingCollectionViewCell.swift in Sources */,
 				3A64D20A29C2CFA900C135F6 /* ChattingPage_TableViewCell.swift in Sources */,
 				3A34AC3E29CA6A5900AF4B71 /* CommentTableViewCell.swift in Sources */,
 				3AEF893129C231A70034B82E /* Post_viewViewController.swift in Sources */,
 				3A34AC3A29CA5E0000AF4B71 /* ExplorePageCollectionViewCell.swift in Sources */,
 				3AE1423F29B6FAB20054EF91 /* ProfileViewController.swift in Sources */,
+				993E09DC29D5592E0066B57B /* TrekCollectionViewCell.swift in Sources */,
 				3A08F69F29CA25E4001DDDB1 /* FeedTopTableViewCell.swift in Sources */,
 				3AACD58429BB068500B96F54 /* ChatTableViewCell.swift in Sources */,
 				3AF80BB029C8776200E46C47 /* UserLoggedIn.swift in Sources */,

@@ -103,3 +103,9 @@ struct User{
     var stories:[storiesView]
     var chats:[String:Chat]
 }
+
+//Trek
+struct Trek{
+    var TrekName: String
+    var image: UIImage
+}
