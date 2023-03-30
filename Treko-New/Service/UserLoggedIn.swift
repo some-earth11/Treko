@@ -52,7 +52,7 @@ struct logged_in_user {
   func feedInitializer(user: User, postNumber: Int) -> [Feed] {
     let feedBase: Feed = Feed(
       name: "", location: "", feedImages: "", profileImage: "", numberOfComments: 0,
-      numberOfLikes: 0, comments: ["" : [PostViewFeedComment(userimage: "", comment: "")]])
+      numberOfLikes: 0, comments:  [PostViewFeedComment(userimage: "", comment: "")])
     var feed: [Feed] = []  // default feed array for top value
     feed.append(feedBase)
     feed.append(feedBase)
@@ -74,26 +74,26 @@ struct logged_in_user {
     let post: [Posts] = [
       Posts(
         images: "mountain1", numberOfComments: 97, numberOfLikes: 32, location: "Nepal",
-        comments:[ "1":[
+        comments:[
           PostViewFeedComment(userimage: "profile", comment: "Awesome")
-        ]]),
+        ]),
       Posts(
         images: "mountain2", numberOfComments: 97, numberOfLikes: 32, location: "Nepal",
-        comments: ["2":[
+        comments: [
           PostViewFeedComment(userimage: "profile", comment: "Awesome"),
           PostViewFeedComment(userimage: "profile", comment: "Awesome"),
-        ]]),
+        ]),
       Posts(
         images: "mountain3", numberOfComments: 97, numberOfLikes: 32, location: "Nepal",
-        comments: ["3":[
+        comments: [
           PostViewFeedComment(userimage: "profile", comment: "Awesome")
-        ]]),
+        ]),
       Posts(
         images: "mountain4", numberOfComments: 97, numberOfLikes: 32, location: "Nepal",
-        comments: ["4":[
+        comments: [
           PostViewFeedComment(userimage: "profile", comment: "Awesome"),
           PostViewFeedComment(userimage: "profile", comment: "Awesome"),
-        ]]),
+        ]),
     ]
 
     self.userDetails = userInitializer(post: post)

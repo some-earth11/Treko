@@ -16,6 +16,7 @@
 		3A3DC96329D43AA2000E859E /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DC96229D43AA2000E859E /* APICalls.swift */; };
 		3A3DC96529D44213000E859E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DC96429D44213000E859E /* LoginViewController.swift */; };
 		3A64D20A29C2CFA900C135F6 /* ChattingPage_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */; };
+		3A7BE3BD29D61E2A009FD890 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7BE3BC29D61E2A009FD890 /* TestStoryboard.storyboard */; };
 		3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */; };
 		3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147729B07E1D00D1D9CB /* AppDelegate.swift */; };
 		3A82147A29B07E1D00D1D9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */; };
@@ -48,6 +49,7 @@
 		3A3DC96229D43AA2000E859E /* APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
 		3A3DC96429D44213000E859E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPage_TableViewCell.swift; sourceTree = "<group>"; };
+		3A7BE3BC29D61E2A009FD890 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
 		3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraouselViewController.swift; sourceTree = "<group>"; };
 		3A82147429B07E1D00D1D9CB /* Treko-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treko-New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A82147729B07E1D00D1D9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		3A7BE3BB29D61E03009FD890 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3A7BE3BC29D61E2A009FD890 /* TestStoryboard.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		3A82146B29B07E1D00D1D9CB = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		3A82147629B07E1D00D1D9CB /* Treko-New */ = {
 			isa = PBXGroup;
 			children = (
+				3A7BE3BB29D61E03009FD890 /* Storyboards */,
 				3A82147729B07E1D00D1D9CB /* AppDelegate.swift */,
 				3A82147929B07E1D00D1D9CB /* SceneDelegate.swift */,
 				3A128EFA29B6F64600A0EC1D /* DataStructs */,
@@ -236,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A82148429B07E1E00D1D9CB /* LaunchScreen.storyboard in Resources */,
+				3A7BE3BD29D61E2A009FD890 /* TestStoryboard.storyboard in Resources */,
 				3A82148129B07E1E00D1D9CB /* Assets.xcassets in Resources */,
 				3A82147F29B07E1D00D1D9CB /* Main.storyboard in Resources */,
 			);

@@ -17,7 +17,7 @@ struct Feed{
     var profileImage:String;
     var numberOfComments:Int64;
     var numberOfLikes:Int64;
-    var comments:[String:[PostViewFeedComment]]
+    var comments:[PostViewFeedComment]
 }
 
 
@@ -75,7 +75,7 @@ struct Posts{
     var numberOfComments:Int64;
     var numberOfLikes:Int64;
     var location:String;
-    var comments:[String:[PostViewFeedComment]]
+    var comments:[PostViewFeedComment]
 }
 
 //On Boarding Screen

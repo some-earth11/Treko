@@ -23,6 +23,7 @@ class Post_viewViewController: UIViewController,UITableViewDelegate,UITableViewD
     var profile_image = UIImage()
     var location_label = ""
     var name_label = ""
+    var comments:[PostViewFeedComment] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,7 @@ class Post_viewViewController: UIViewController,UITableViewDelegate,UITableViewD
         profileImage.image = profile_image
         locationLabel.text = location_label
         nameLabel.text = name_label
-        data = userInstance.userFeed[0].comments["0"]!
+        data = comments
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +42,7 @@ class Post_viewViewController: UIViewController,UITableViewDelegate,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let datas = data[indexPath.row]
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CommentTableViewCell
+
         cell.imageLabel.image = UIImage(named: datas.userimage)
         cell.label.text = datas.comment
         return cell

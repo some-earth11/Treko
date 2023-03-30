@@ -33,6 +33,7 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
             vc?.location_label = datas.location
             vc?.profile_image = UIImage(named: datas.profileImage)!
             vc?.post_image = UIImage(named: datas.feedImages)!
+            vc?.comments = datas.comments
             self.navigationController?.pushViewController(vc!, animated: true)
             break;
         }
