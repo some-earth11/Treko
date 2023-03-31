@@ -9,6 +9,4 @@ import UIKit
 
 class ExplorePageCollectionViewCell: UICollectionViewCell {
     @IBOutlet var image: UIImageView!
-    
-    @IBOutlet weak var label: UILabel!
 }
