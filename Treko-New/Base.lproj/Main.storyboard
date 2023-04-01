@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSl-Zn-fh8">
-                                <rect key="frame" x="0.0" y="0.0" width="506" height="932"/>
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="INz-Kp-AoS" userLabel="Scroll Stack View">
                                         <rect key="frame" x="5" y="0.0" width="496" height="1739"/>
@@ -1409,7 +1409,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell1" reuseIdentifier="cell1" id="tOk-R7-t24" customClass="Cell1CollectionViewCell" customModule="Treko_New" customModuleProvider="target">
-                                        <rect key="frame" x="90.666666666666671" y="0.0" width="210" height="91"/>
+                                        <rect key="frame" x="94.666666666666671" y="0.0" width="210" height="91"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="04N-S3-fBp">
                                             <rect key="frame" x="0.0" y="0.0" width="210" height="91"/>
@@ -1449,20 +1449,20 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell2" reuseIdentifier="cell2" id="YSa-sl-bEc" customClass="Cell2CollectionViewCell" customModule="Treko_New" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="101" width="391" height="483"/>
+                                        <rect key="frame" x="0.0" y="101" width="399" height="578"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hy2-AF-M7u">
-                                            <rect key="frame" x="0.0" y="0.0" width="391" height="483"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="399" height="578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SGr-sV-I68">
-                                                    <rect key="frame" x="0.0" y="0.0" width="391" height="483"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="399" height="578"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rjL-p9-p8Z">
-                                                            <rect key="frame" x="0.0" y="0.0" width="391" height="439"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="399" height="534"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dz-Yp-JzK">
-                                                            <rect key="frame" x="160" y="447" width="71" height="36"/>
+                                                            <rect key="frame" x="164" y="542" width="71" height="36"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1483,7 +1483,7 @@
                                                 <constraint firstItem="SGr-sV-I68" firstAttribute="top" secondItem="Hy2-AF-M7u" secondAttribute="top" id="uw9-zE-MgT"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="391" height="483"/>
+                                        <size key="customSize" width="399" height="578"/>
                                         <connections>
                                             <outlet property="imageView" destination="rjL-p9-p8Z" id="BDM-Z5-t4R"/>
                                             <outlet property="labelView" destination="7dz-Yp-JzK" id="fL5-U6-4du"/>
@@ -1512,7 +1512,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW6-PR-A6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4587" y="1716"/>
+            <point key="canvasLocation" x="4586.5116279069771" y="1715.6652360515022"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="f2D-dZ-p6v">

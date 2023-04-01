@@ -76,13 +76,13 @@ class ExplorePageViewController: UIViewController,UICollectionViewDelegate,UICol
         let groupSize =
                        NSCollectionLayoutSize(widthDimension:
                        .absolute(390),
-                       heightDimension: .absolute(440))
+                       heightDimension: .absolute(540))
         let group =
                        NSCollectionLayoutGroup.horizontal(layoutSize:
                        groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
+        section.orthogonalScrollingBehavior = .groupPagingCentered
         
         return section
     }
