@@ -20,14 +20,30 @@ class LoginViewController: UIViewController {
     
     @IBAction func clickLogin(_ sender: UIButton) {
         if(username.text != "" && password.text != ""){
-            let response: () = apiCall.Login(username: username.text!, password: password.text!)
-            print(response)
-            
-            
-
+            let parameters = [ "username" :username.text!,
+                               "password": password.text! ]
+            apiCall.POST(parameters: parameters,route:"/login") { result in
+                switch result {
+                case .success(let responseData):
+                    if(responseData["msg"]! == "Welcome back!"){
+                        self.handleLogin()
+                    }
+                case .failure(let error):
+                    print("Err",error)
+                }
+            }
         }else{
             print("Empty field")
         }
+    }
+    func handleLogin(){
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
+            tabBarController.modalPresentationStyle = .fullScreen
+            self.present(tabBarController, animated: true, completion: nil)
+        }
+
     }
     
 

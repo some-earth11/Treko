@@ -8,64 +8,43 @@ import UIKit
 import Foundation
 
 struct API {
+
+    let urlS = "https://treko-backend.onrender.com/app"
+
     
-//    let urlS = "https://ff3c-2401-4900-1cd4-aa34-d83c-de52-e12-4d0e.in.ngrok.io/app"
-    let urlS = "localhost:8888/app"
-//    let defaults = UserDefaults.standard
-
-
-    func Login(username:String, password:String) {
-        let parameters = [ "Username" :username,
-                           "password": password ]
-
-        POST (parameters: parameters, route: "/login", completion: { data in
-            print("Request success ")
-        })
-    }
-
-    func POST(parameters:[AnyHashable:Any],route:String,  completion: @escaping (String?)->()){
-        let url = URL(string: urlS+route)!
-        let request = NSMutableURLRequest(url: url)
+    func POST(parameters:[String:String],route:String,completionHandler: @escaping (Result<[String:String], Error>) -> Void) {
+        let url = URL(string: "\(urlS)\(route)")!
+        var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        request.httpBody = try? JSONSerialization.data(withJSONObject: parameters)
-
-        // create the session
-        let session = URLSession.shared
-        // create the data task
-        let task = session.dataTask(with: request as URLRequest) { data, response, error in
-            // handle the response
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let requestData = parameters
+        let jsonData = try! JSONEncoder().encode(requestData)
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
-                print("Error: (error)")
-                completion(nil)
+                completionHandler(.failure(error))
                 return
             }
-
-            guard let data = data, let response = response as? HTTPURLResponse else {
-                print("Invalid response")
-                completion(nil)
+            
+            guard let data = data,
+                  let httpResponse = response as? HTTPURLResponse,
+                  httpResponse.statusCode == 200 else {
+                completionHandler(.failure(NSError(domain: "com.example.postRequest", code: -1,
+                                                    userInfo: [NSLocalizedDescriptionKey: "Invalid response"])))
                 return
             }
-
-            print(data)
-
-            if response.statusCode == 200 {
-                // handle successful response
-//                defaults.set(true, forKey: "loggedIn")
-                print("Success")
-                //convert data to string
-                var str = String(data: data, encoding: .utf8)
-                print("\(str)")
-//                performSegue(withIdentifier: "LoggedinSuccess", sender: self)
-                return
-            } else {
-                // handle error response
-                print("Error: \(response.statusCode)")
-                return
+            
+            do {
+                let responseData = try JSONDecoder().decode([String:String].self, from: data)
+                completionHandler(.success(responseData))
+            } catch {
+                completionHandler(.failure(error))
             }
         }
-        // start the task
+        
         task.resume()
     }
+    
 }
