@@ -10,6 +10,42 @@ import Foundation
 struct API {
 
     let urlS = "https://treko-backend.onrender.com/app"
+    
+    func GET(route:String,completion: @escaping (Data?, Error?) -> Void) {
+        // Create URL object
+        guard let url = URL(string: "\(urlS)\(route)") else {
+            completion(nil, nil)
+            return
+        }
+        
+        // Create URL request
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        // Create URL session
+        let session = URLSession.shared
+        
+        // Create data task
+        let task = session.dataTask(with: request) { (data, response, error) in
+            // Check for errors
+            guard error == nil else {
+                completion(nil, error)
+                return
+            }
+            
+            // Check for HTTP status code 200
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                completion(nil, nil)
+                return
+            }
+            
+            // Return data
+            completion(data, nil)
+        }
+        
+        // Start data task
+        task.resume()
+    }
 
     
     func POST(parameters:[String:String],route:String,completionHandler: @escaping (Result<[String:String], Error>) -> Void) {

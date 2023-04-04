@@ -15,11 +15,30 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     var data:[Feed] = []
     
+    let apiCall = API()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Feed"
         data = userInstance.userFeed
         table?.dataSource = self
+        
+        apiCall.GET(route: "/getFeed"){ (data, error) in
+            if let error = error {
+                // Handle error
+                return
+            }
+            
+            guard let data = data else {
+                // Handle missing data
+                return
+            }
+            
+            
+            print("data",data)
+            // Process data
+        }
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch(indexPath.row){
