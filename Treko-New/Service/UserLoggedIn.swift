@@ -68,6 +68,8 @@ struct logged_in_user {
     }
     return feed
   }
+    
+    
 
   init() {
       
@@ -99,8 +101,11 @@ struct logged_in_user {
         ]),
     ]
 
-      self.userDetails = userInitializer(user:
-                                            defaults.string(forKey: "user")!,post: post)
-    self.userFeed = feedInitializer(user: self.userDetails, postNumber: post.count)
+      if(defaults.string(forKey: "user") != ""){
+        self.userDetails = userInitializer(user:
+                                                defaults.string(forKey: "user")!,post: post)
+        self.userFeed = feedInitializer(user: self.userDetails, postNumber: post.count)}
+      
+
   }
 }
