@@ -18,6 +18,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileDescription: UILabel!
     
     let userInstance = logged_in_user()
+    
+    var defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,21 @@ class ProfileViewController: UIViewController {
         userName.text = loggedInUser!.userName
         fullName.text = loggedInUser!.fullName
         profileDescription.text = loggedInUser!.profileDescription
+    }
+    
+    
+    @IBAction func logOutClicked(_ sender: Any) {
+        defaults.set("",forKey: "user")
+        self.handleLogout()
+    }
+    func handleLogout(){
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! UIViewController
+            tabBarController.modalPresentationStyle = .fullScreen
+            self.present(tabBarController, animated: true, completion: nil)
+        }
+
     }
     
 }

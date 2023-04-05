@@ -8,11 +8,13 @@
 import Foundation
 
 struct logged_in_user {
+    
+    
 
   var userDetails: User!
   var userFeed: [Feed]!
 
-  func userInitializer(post: [Posts]) -> User {
+    func userInitializer(user:String,post: [Posts]) -> User {
 
     let arrDataF = [
       storiesView(imageName: "uploadPlus", imageTitle: "upload"),
@@ -43,7 +45,7 @@ struct logged_in_user {
     ]
 
     let user: User = User(
-      userName: "aryansingh_920", fullName: "Aryan Singh", profilePicture: "profile",
+      userName: user, fullName: "Aryan Singh", profilePicture: "profile",
       profileDescription: "Trekker", numberOfPosts: 23, numberOfFollowers: 604,
       numberOfFollowing: 19, posts: post, stories: arrDataF, chats: chatData)
     return user
@@ -68,6 +70,8 @@ struct logged_in_user {
   }
 
   init() {
+      
+      var defaults = UserDefaults.standard
       
       
     let post: [Posts] = [
@@ -95,7 +99,8 @@ struct logged_in_user {
         ]),
     ]
 
-    self.userDetails = userInitializer(post: post)
+      self.userDetails = userInitializer(user:
+                                            defaults.string(forKey: "user")!,post: post)
     self.userFeed = feedInitializer(user: self.userDetails, postNumber: post.count)
   }
 }
