@@ -73,7 +73,7 @@ struct logged_in_user {
 
   init() {
       
-      var defaults = UserDefaults.standard
+      let defaults = UserDefaults.standard
       
       
     let post: [Posts] = [

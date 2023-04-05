@@ -30,10 +30,12 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
         apiCall.GET(route: "/getFeed"){ (data, error) in
             if let error = error {
                 // Handle error
+                print(error)
                 return
             }
             
             guard let data = data else {
+                print(data!)
                 // Handle missing data
                 return
             }
