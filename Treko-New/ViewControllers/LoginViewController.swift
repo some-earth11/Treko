@@ -17,9 +17,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         defaults = UserDefaults.standard
-        if(defaults.string(forKey: "user")! != ""){
-            self.handleLogin()
-        }
+
+//        if(defaults.string(forKey: "user") != nil && defaults.string(forKey: "user")!.count>0){
+//            print("here if statement",defaults.string(forKey: "user")!)
+//            self.handleLogin()
+//        }
     }
     
     @IBAction func clickLogin(_ sender: UIButton) {

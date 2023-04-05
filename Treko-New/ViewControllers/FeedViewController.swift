@@ -27,22 +27,13 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         print("User",defaults.string(forKey: "user")!)
         
-        apiCall.GET(route: "/getFeed"){ (data, error) in
-            if let error = error {
-                // Handle error
-                print(error)
-                return
+        apiCall.GET(route: "/getFeed"){ result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print("Error fetching JSON data: \(error.localizedDescription)")
             }
-            
-            guard let data = data else {
-                print(data!)
-                // Handle missing data
-                return
-            }
-            
-            
-            print("data",data)
-            // Process data
         }
         
     }

@@ -11,42 +11,42 @@ struct API {
 
     let urlS = "https://treko-backend.onrender.com/app"
     
-    func GET(route:String,completion: @escaping (Data?, Error?) -> Void) {
-        // Create URL object
-        guard let url = URL(string: "\(urlS)\(route)") else {
-            completion(nil, nil)
-            return
-        }
-        
-        // Create URL request
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        // Create URL session
+    func GET(route:String,completion: @escaping (Result<[String:[Dictionary<String, String>]], Error>) -> Void) {
+        // Create a URL session
+        let url = URL(string: "\(urlS)\(route)")!
         let session = URLSession.shared
-        
-        // Create data task
-        let task = session.dataTask(with: request) { (data, response, error) in
-            // Check for errors
-            guard error == nil else {
-                completion(nil, error)
+
+        // Create a data task to fetch the JSON data
+        let task = session.dataTask(with: url) { data, response, error in
+            // Check if there was an error
+            if let error = error {
+                completion(.failure(error))
                 return
             }
             
-            // Check for HTTP status code 200
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                completion(nil, nil)
+            // Check if there is any data
+            guard let data = data else {
+                completion(.failure(NSError(domain: "com.example.app", code: -1, userInfo: [NSLocalizedDescriptionKey: "No data returned from server."])))
                 return
             }
             
-            // Return data
-            completion(data, nil)
+            do {
+                // Decode the JSON data using JSONDecoder
+                let decoder = JSONDecoder()
+                let todo = try decoder.decode([String:[Dictionary<String, String>]].self, from: data)
+                
+                // Call the completion handler with the fetched todo object
+                
+                completion(.success(todo))
+            } catch {
+                completion(.failure(error))
+            }
         }
         
-        // Start data task
+        // Start the data task
         task.resume()
     }
-
+    
     
     func POST(parameters:[String:String],route:String,completionHandler: @escaping (Result<[String:String], Error>) -> Void) {
         let url = URL(string: "\(urlS)\(route)")!

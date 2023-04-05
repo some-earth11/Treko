@@ -13,6 +13,9 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    
+    let apiCall = API()
+    
     var slides: [OnboardingSlide] = []
     
     var currentPage = 0 {
@@ -28,6 +31,16 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        apiCall.GET(route: ""){ result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print("Error fetching JSON data: \(error.localizedDescription)")
+            }
+        }
+        
         // Do any additional setup after loading the view.
 //        collectionView.delegate = self
 //        collectionView.dataSource = self
