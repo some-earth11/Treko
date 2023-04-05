@@ -43,7 +43,7 @@ class ProfileViewController: UIViewController {
     func handleLogout(){
         DispatchQueue.main.async {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let tabBarController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! UIViewController
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") 
             tabBarController.modalPresentationStyle = .fullScreen
             self.present(tabBarController, animated: true, completion: nil)
         }

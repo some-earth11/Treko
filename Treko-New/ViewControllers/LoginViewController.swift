@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
                 switch result {
                 case .success(let responseData):
                     if(responseData["msg"]! == "Welcome back!"){
-                        self.defaults.set(self.username.text!,forKey: "user")
+
                         self.handleLogin()
                     }else{
                         self.handleError(msg: responseData["msg"]!)
@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
     }
     func handleLogin(){
         DispatchQueue.main.async {
+            self.defaults.set(self.username.text!,forKey: "user")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let tabBarController = storyboard.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
             tabBarController.modalPresentationStyle = .fullScreen
@@ -55,10 +56,12 @@ class LoginViewController: UIViewController {
 
     }
     func handleError(msg:String){
-        let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel,handler: {action in print("Tapped dismiss")}))
-        present(alert,animated: true)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel,handler: {action in print("Tapped dismiss")}))
+            self.present(alert,animated: true)
+        }
     }
     
 
