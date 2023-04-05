@@ -17,11 +17,15 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     let apiCall = API()
     
+    var defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Feed"
         data = userInstance.userFeed
         table?.dataSource = self
+        
+        print("User",defaults.string(forKey: "user")!)
         
         apiCall.GET(route: "/getFeed"){ (data, error) in
             if let error = error {

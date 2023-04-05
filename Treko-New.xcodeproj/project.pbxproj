@@ -10,6 +10,7 @@
 		3A08F69F29CA25E4001DDDB1 /* FeedTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A08F69E29CA25E4001DDDB1 /* FeedTopTableViewCell.swift */; };
 		3A0B2A3F29CDA5B200A02EFB /* StoriesFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B2A3E29CDA5B200A02EFB /* StoriesFeedTableViewCell.swift */; };
 		3A0B2A4129CDA72B00A02EFB /* StoriesFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B2A4029CDA72B00A02EFB /* StoriesFeedCollectionViewCell.swift */; };
+		3A24E62D29DD48D8007CBF34 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24E62C29DD48D8007CBF34 /* RegisterViewController.swift */; };
 		3A34AC3C29CA5E4700AF4B71 /* ExplorePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */; };
 		3A34AC3E29CA6A5900AF4B71 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A34AC3D29CA6A5900AF4B71 /* CommentTableViewCell.swift */; };
 		3A3DC96329D43AA2000E859E /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DC96229D43AA2000E859E /* APICalls.swift */; };
@@ -44,6 +45,7 @@
 		3A08F69E29CA25E4001DDDB1 /* FeedTopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTopTableViewCell.swift; sourceTree = "<group>"; };
 		3A0B2A3E29CDA5B200A02EFB /* StoriesFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesFeedTableViewCell.swift; sourceTree = "<group>"; };
 		3A0B2A4029CDA72B00A02EFB /* StoriesFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesFeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A24E62C29DD48D8007CBF34 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePageViewController.swift; sourceTree = "<group>"; };
 		3A34AC3D29CA6A5900AF4B71 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		3A3DC96229D43AA2000E859E /* APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */,
 				3AB2681B29BDB457001926D5 /* ChatingPageViewController.swift */,
 				3A3DC96429D44213000E859E /* LoginViewController.swift */,
+				3A24E62C29DD48D8007CBF34 /* RegisterViewController.swift */,
 				3AEF893029C231A70034B82E /* Post_viewViewController.swift */,
 				3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */,
 				3AE1424029B6FACC0054EF91 /* FeedViewController.swift */,
@@ -294,6 +297,7 @@
 				3A34AC3E29CA6A5900AF4B71 /* CommentTableViewCell.swift in Sources */,
 				3AEF893129C231A70034B82E /* Post_viewViewController.swift in Sources */,
 				3AE1423F29B6FAB20054EF91 /* ProfileViewController.swift in Sources */,
+				3A24E62D29DD48D8007CBF34 /* RegisterViewController.swift in Sources */,
 				993E09DC29D5592E0066B57B /* TrekCollectionViewCell.swift in Sources */,
 				3A08F69F29CA25E4001DDDB1 /* FeedTopTableViewCell.swift in Sources */,
 				3AACD58429BB068500B96F54 /* ChatTableViewCell.swift in Sources */,

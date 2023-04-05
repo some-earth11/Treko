@@ -13,9 +13,13 @@ class LoginViewController: UIViewController {
     @IBOutlet var password: UITextField!
     
     let apiCall = API()
-    
+    var defaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
+        defaults = UserDefaults.standard
+        if(defaults.string(forKey: "user")! != ""){
+            self.handleLogin()
+        }
     }
     
     @IBAction func clickLogin(_ sender: UIButton) {
@@ -26,14 +30,19 @@ class LoginViewController: UIViewController {
                 switch result {
                 case .success(let responseData):
                     if(responseData["msg"]! == "Welcome back!"){
+                        self.defaults.set(self.username.text!,forKey: "user")
                         self.handleLogin()
+                    }else{
+                        self.handleError(msg: responseData["msg"]!)
                     }
                 case .failure(let error):
                     print("Err",error)
+                    self.handleError(msg: "Error in server")
                 }
             }
         }else{
             print("Empty field")
+            handleError(msg: "Error empty Field")
         }
     }
     func handleLogin(){
@@ -44,6 +53,12 @@ class LoginViewController: UIViewController {
             self.present(tabBarController, animated: true, completion: nil)
         }
 
+    }
+    func handleError(msg:String){
+        let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel,handler: {action in print("Tapped dismiss")}))
+        present(alert,animated: true)
     }
     
 
