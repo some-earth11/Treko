@@ -11,8 +11,6 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     @IBOutlet weak var table: UITableView!
     
-
-
     var data:[Feed] = []
     
     let apiCall = API()
@@ -75,11 +73,17 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
         case 1:
             let cell = table.dequeueReusableCell(withIdentifier: "cellStory", for: indexPath) as! StoriesFeedTableViewCell
             cell.collectionView.tag = indexPath.section
-            cell.layer.shadowOffset = CGSizeMake(0, 0)
-            cell.layer.shadowColor = UIColor.black.cgColor
-            cell.layer.shadowOpacity = 0.23
-            cell.layer.shadowRadius = 4
-            cell.isSelected = true
+            let stories = logged_in_user().userDetails.stories
+            cell.arrDataF = stories
+            
+            DispatchQueue.main.async {
+                cell.layer.shadowOffset = CGSizeMake(0, 0)
+                cell.layer.shadowColor = UIColor.black.cgColor
+                cell.layer.shadowOpacity = 0.23
+                cell.layer.shadowRadius = 4
+                cell.isSelected = true
+            }
+            
             return cell
         default:
             let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedTableViewCell
