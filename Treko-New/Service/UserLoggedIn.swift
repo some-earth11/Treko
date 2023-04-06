@@ -99,6 +99,15 @@ struct logged_in_user {
           }
       }
 //      print("feedHere",feed)
+      
+      for index in 0...postNumber - 1 {
+        feed.append(
+          Feed(
+            name: user.fullName, location: user.posts[index].location,
+            feedImages: user.posts[index].images, profileImage: user.profilePicture,
+            numberOfComments: user.posts[index].numberOfComments,
+            numberOfLikes: user.posts[index].numberOfLikes, comments: user.posts[index].comments))
+      }
     return feed
   }
     
