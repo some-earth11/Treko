@@ -11,7 +11,7 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     @IBOutlet weak var table: UITableView!
     
-    let userInstance = logged_in_user()
+
 
     var data:[Feed] = []
     
@@ -20,23 +20,13 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
     var defaults = UserDefaults.standard
     
     override func viewDidLoad() {
+        let userInstance = logged_in_user()
         super.viewDidLoad()
         title = "Feed"
         data = userInstance.userFeed
         table?.dataSource = self
         
         print("User",defaults.string(forKey: "user")!)
-        
-        apiCall.GET(route: "/getFeed"){ result in
-            switch result {
-            case .success(let response):
-                let resp = (response["msg"]  as! [[String:Any]])
-                print("rep",resp[0])
-                
-            case .failure(let error):
-                print("Error fetching JSON data: \(error.localizedDescription)")
-            }
-        }
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
