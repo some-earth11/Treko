@@ -30,7 +30,9 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
         apiCall.GET(route: "/getFeed"){ result in
             switch result {
             case .success(let response):
-                print(response)
+                let resp = (response["msg"]  as! [[String:Any]])
+                print("rep",resp[0])
+                
             case .failure(let error):
                 print("Error fetching JSON data: \(error.localizedDescription)")
             }

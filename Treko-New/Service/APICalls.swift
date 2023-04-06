@@ -11,7 +11,7 @@ struct API {
 
     let urlS = "https://treko-backend.onrender.com/app"
     
-    func GET(route:String,completion: @escaping (Result<[String:[Dictionary<String, String>]], Error>) -> Void) {
+    func GET(route:String,completion: @escaping (Result<[String:Any], Error>) -> Void) {
         // Create a URL session
         let url = URL(string: "\(urlS)\(route)")!
         let session = URLSession.shared
@@ -32,12 +32,13 @@ struct API {
             
             do {
                 // Decode the JSON data using JSONDecoder
-                let decoder = JSONDecoder()
-                let todo = try decoder.decode([String:[Dictionary<String, String>]].self, from: data)
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                
+//                print(json!)
                 
                 // Call the completion handler with the fetched todo object
                 
-                completion(.success(todo))
+                completion(.success(json!))
             } catch {
                 completion(.failure(error))
             }

@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qSl-Zn-fh8">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSl-Zn-fh8">
+                                <rect key="frame" x="0.0" y="0.0" width="506" height="932"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="INz-Kp-AoS" userLabel="Scroll Stack View">
                                         <rect key="frame" x="5" y="0.0" width="496" height="1739"/>
@@ -1605,7 +1605,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="f2D-dZ-p6v">
             <objects>
-                <viewController id="gHr-rc-AfG" customClass="OnboardingViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="gHr-rc-AfG" customClass="OnboardingViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s0H-o5-ElZ">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
