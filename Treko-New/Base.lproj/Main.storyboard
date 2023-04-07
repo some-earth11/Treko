@@ -1154,6 +1154,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_story" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-1O-j4I">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GR-Dc-Jre">
+                                <rect key="frame" x="20" y="20" width="49" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RkJ-jX-dma"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.51748758279999996" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1161,6 +1167,8 @@
                             <constraint firstItem="RkJ-jX-dma" firstAttribute="bottom" secondItem="4Of-1O-j4I" secondAttribute="bottom" id="RYd-76-Hsy"/>
                             <constraint firstItem="4Of-1O-j4I" firstAttribute="leading" secondItem="RkJ-jX-dma" secondAttribute="leading" id="VUW-g5-qh8"/>
                             <constraint firstItem="RkJ-jX-dma" firstAttribute="trailing" secondItem="4Of-1O-j4I" secondAttribute="trailing" id="WHQ-LF-8Zv"/>
+                            <constraint firstItem="7GR-Dc-Jre" firstAttribute="top" secondItem="RkJ-jX-dma" secondAttribute="top" constant="20" id="c2m-Qk-xOV"/>
+                            <constraint firstItem="7GR-Dc-Jre" firstAttribute="leading" secondItem="RkJ-jX-dma" secondAttribute="leading" constant="20" id="c7g-SK-unG"/>
                             <constraint firstItem="4Of-1O-j4I" firstAttribute="top" secondItem="RkJ-jX-dma" secondAttribute="top" id="uIE-aA-GLe"/>
                         </constraints>
                     </view>
