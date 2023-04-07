@@ -68,8 +68,9 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
         let collectionHeight = collectionView.bounds.height
         return CGSize(width: collectionWidth/numOfElements, height: collectionHeight)
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let sender:[String:Any?] = ["image":"image_story"]
+//        self.performSegue(withIdentifier: "feedPageStorySegue", sender: sender)
+//    }
 
 }

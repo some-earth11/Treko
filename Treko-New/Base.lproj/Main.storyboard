@@ -940,6 +940,7 @@
                                                             <size key="customSize" width="60" height="15"/>
                                                             <connections>
                                                                 <outlet property="imagesView" destination="wsJ-CL-9Xj" id="yfn-fG-sia"/>
+                                                                <segue destination="pzI-li-xgN" kind="presentation" identifier="feedPageStorySegue" id="kdF-Ni-a4q"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -1141,6 +1142,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eB-tm-pGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4586.5116279069771" y="-1624.2489270386268"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hW1-2Q-w63">
+            <objects>
+                <viewController id="pzI-li-xgN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y8e-6z-wyL">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_story" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-1O-j4I">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RkJ-jX-dma"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.51748758279999996" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="RkJ-jX-dma" firstAttribute="bottom" secondItem="4Of-1O-j4I" secondAttribute="bottom" id="RYd-76-Hsy"/>
+                            <constraint firstItem="4Of-1O-j4I" firstAttribute="leading" secondItem="RkJ-jX-dma" secondAttribute="leading" id="VUW-g5-qh8"/>
+                            <constraint firstItem="RkJ-jX-dma" firstAttribute="trailing" secondItem="4Of-1O-j4I" secondAttribute="trailing" id="WHQ-LF-8Zv"/>
+                            <constraint firstItem="4Of-1O-j4I" firstAttribute="top" secondItem="RkJ-jX-dma" secondAttribute="top" id="uIE-aA-GLe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nHD-di-kkA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32Y-DF-rHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3680" y="-2450"/>
         </scene>
         <!--Add Post View Controller-->
         <scene sceneID="6QT-BG-Lgs">
@@ -1656,6 +1684,7 @@
                             <constraint firstItem="aFh-BG-xl9" firstAttribute="top" secondItem="L3f-GO-R4m" secondAttribute="top" id="ulG-yE-Egv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="V3C-Ug-KaD"/>
                     <connections>
                         <outlet property="commentInput" destination="kVE-68-2PC" id="9CD-3R-D6w"/>
                         <outlet property="locationLabel" destination="JlO-aP-6YF" id="yls-va-iFY"/>
