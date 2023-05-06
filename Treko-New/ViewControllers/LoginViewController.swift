@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     let apiCall = API()
     var defaults = UserDefaults.standard
     override func viewDidLoad() {
+        username.text = "aryansingh920"
+        password.text = "1234567890"
         super.viewDidLoad()
         defaults = UserDefaults.standard
 

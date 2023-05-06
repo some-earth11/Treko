@@ -48,7 +48,8 @@ struct logged_in_user {
             result in
             switch result {
             case .success(let response):
-                print("respomnse",response)
+                break
+//                print("respomnse",response)
             case .failure(let error):
                 print("Error User fetching JSON data: \(error.localizedDescription)")
             }
@@ -85,7 +86,7 @@ struct logged_in_user {
                   feed.append(feedI)
 
               }
-              print("after loop feedI",feed)
+//              print("after loop feedI",feed)
           case .failure(let error):
               print("Error fetching JSON data: \(error.localizedDescription)")
               for index in 0...postNumber - 1 {

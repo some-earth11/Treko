@@ -17,16 +17,68 @@ class FeedViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     var defaults = UserDefaults.standard
     
+    
+    
     override func viewDidLoad() {
         let userInstance = logged_in_user()
-        super.viewDidLoad()
+        
         title = "Feed"
-        data = userInstance.userFeed
+        
+        DispatchQueue.main.async {
+            self.APICall()
+            self.table.reloadData()
+        }
+        
+        print("Data",data)
+        super.viewDidLoad()
+
+        
+//        data = userInstance.userFeed
         table?.dataSource = self
         
         print("User",defaults.string(forKey: "user")!)
         
     }
+    
+    func APICall(){
+        let feedBase: Feed = Feed(
+          name: "", location: "", feedImages: "", profileImage: "", numberOfComments: 0,
+          numberOfLikes: 0, comments:  [PostViewFeedComment(userimage: "", comment: "")])
+//          var data: [Feed] = []  // default feed array for top value
+        self.data.append(feedBase)
+        self.data.append(feedBase)
+        
+//        DispatchQueue.main.async {
+            API().GET(route: "/getFeed"){ result in
+                switch result {
+                case .success(let response):
+                    let resp = (response["msg"]  as! [[String:Any]])
+                    for i in resp{
+                        let user:[String:Any] = i["user"] as! [String : Any]
+                        let name = "\(user["firstName"] as! String) \(user["lastName"] as! String)"
+                        let location = i["location"] as! String
+                        let img = i["images"] as! String
+                        let nol =  i["numberOfLikes"] as! Int
+                        let noc = i["numberOfComments"] as! Int
+                        let comments = i["comments"] as! Array<Any>
+                        let feedI = Feed(name: name, location: location, feedImages: "mountain1", profileImage: "profile", numberOfComments: Int64(noc), numberOfLikes: Int64(nol), comments: [ PostViewFeedComment(userimage: "profile", comment: "Awesome"),])
+                        self.data.append(feedI)
+                        
+                        DispatchQueue.main.async {
+                            self.table.reloadData()
+                        }
+
+
+                    }
+
+                case .failure(let error):
+                    print("Error fetching JSON data: \(error.localizedDescription)")
+                }
+            }
+//        }
+
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch(indexPath.row){
         case 0...1:
