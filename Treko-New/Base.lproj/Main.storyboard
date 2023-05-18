@@ -1195,27 +1195,30 @@
                                             <constraint firstAttribute="height" constant="100" id="mhZ-Nb-5YF"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnY-Cr-4AD">
-                                        <rect key="frame" x="0.0" y="152.33333333333331" width="512" height="48"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Add Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnY-Cr-4AD">
+                                        <rect key="frame" x="0.0" y="114" width="512" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image Link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CeQ-n9-kBh">
-                                        <rect key="frame" x="0.0" y="252.66666666666669" width="512" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Clc-1i-18W">
+                                        <rect key="frame" x="0.0" y="175.66666666666669" width="512" height="178"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tI-M4-hEQ">
+                                        <rect key="frame" x="0.0" y="367.66666666666663" width="512" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Upload"/>
                                         <connections>
-                                            <action selector="imageLink:" destination="GQF-Cd-arK" eventType="editingDidEnd" id="Pmm-lM-CJJ"/>
+                                            <action selector="selectImageTapped:" destination="rBA-IP-LW0" eventType="touchUpInside" id="8tY-Hl-YVt"/>
                                         </connections>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epC-5m-jsa">
-                                        <rect key="frame" x="0.0" y="339" width="512" height="34"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epC-5m-jsa">
+                                        <rect key="frame" x="0.0" y="416" width="512" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-fY-Tfx">
-                                        <rect key="frame" x="0.0" y="425.33333333333337" width="512" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-fY-Tfx">
+                                        <rect key="frame" x="0.0" y="463.66666666666663" width="512" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1242,15 +1245,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="Txz-YU-Qah"/>
                     <connections>
-                        <outlet property="imageLink" destination="CeQ-n9-kBh" id="SYu-My-Zo7"/>
+                        <outlet property="imageView" destination="Clc-1i-18W" id="G35-PQ-mXj"/>
                         <outlet property="location" destination="KNB-fY-Tfx" id="DIP-ue-Elh"/>
                         <outlet property="postDescription" destination="epC-5m-jsa" id="jJF-VF-9YC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJr-eo-ANJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="GQF-Cd-arK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4587" y="-2450"/>
+            <point key="canvasLocation" x="4586.5116279069771" y="-2450.2145922746781"/>
         </scene>
         <!--Chat-->
         <scene sceneID="M0q-gO-b3l">
