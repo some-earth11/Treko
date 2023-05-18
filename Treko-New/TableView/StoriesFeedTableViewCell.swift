@@ -31,6 +31,10 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
         // Configure the view for the selected state
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print(indexPath)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrDataF.count
     }

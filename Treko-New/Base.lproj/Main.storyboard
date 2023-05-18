@@ -807,8 +807,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="gOt-if-Yf7" kind="relationship" relationship="viewControllers" id="HYQ-F7-Pxh"/>
-                        <segue destination="gxJ-yI-nb0" kind="relationship" relationship="viewControllers" id="P2d-37-sZU"/>
                         <segue destination="aaf-fP-sBt" kind="relationship" relationship="viewControllers" id="Xti-1R-yO7"/>
+                        <segue destination="gxJ-yI-nb0" kind="relationship" relationship="viewControllers" id="P2d-37-sZU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsE-x3-jJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
