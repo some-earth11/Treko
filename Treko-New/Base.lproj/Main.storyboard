@@ -940,7 +940,6 @@
                                                             <size key="customSize" width="60" height="15"/>
                                                             <connections>
                                                                 <outlet property="imagesView" destination="wsJ-CL-9Xj" id="yfn-fG-sia"/>
-                                                                <segue destination="pzI-li-xgN" kind="presentation" identifier="feedPageStorySegue" id="kdF-Ni-a4q"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -1143,19 +1142,19 @@
             </objects>
             <point key="canvasLocation" x="4586.5116279069771" y="-1624.2489270386268"/>
         </scene>
-        <!--View Controller-->
+        <!--Storyview Page View Controller-->
         <scene sceneID="hW1-2Q-w63">
             <objects>
-                <viewController id="pzI-li-xgN" sceneMemberID="viewController">
+                <viewController id="pzI-li-xgN" customClass="StoryviewPageViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y8e-6z-wyL">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_story" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-1O-j4I">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GR-Dc-Jre">
-                                <rect key="frame" x="20" y="20" width="49" height="26"/>
+                                <rect key="frame" x="20" y="79" width="49" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

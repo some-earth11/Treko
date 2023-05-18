@@ -18,6 +18,7 @@
 		3A4F46C129DDFBA900B727D1 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F46C029DDFBA900B727D1 /* AddPostViewController.swift */; };
 		3A5B36302A166E940071550B /* ExploreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B362F2A166E940071550B /* ExploreStoryboard.storyboard */; };
 		3A5B36322A166F2B0071550B /* ExplorePageNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B36312A166F2B0071550B /* ExplorePageNewViewController.swift */; };
+		3A5B36342A167C120071550B /* StoryviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B36332A167C120071550B /* StoryviewPageViewController.swift */; };
 		3A64D20A29C2CFA900C135F6 /* ChattingPage_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */; };
 		3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */; };
 		3A82147829B07E1D00D1D9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A82147729B07E1D00D1D9CB /* AppDelegate.swift */; };
@@ -60,6 +61,7 @@
 		3A4F46C029DDFBA900B727D1 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		3A5B362F2A166E940071550B /* ExploreStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExploreStoryboard.storyboard; sourceTree = "<group>"; };
 		3A5B36312A166F2B0071550B /* ExplorePageNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePageNewViewController.swift; sourceTree = "<group>"; };
+		3A5B36332A167C120071550B /* StoryviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryviewPageViewController.swift; sourceTree = "<group>"; };
 		3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPage_TableViewCell.swift; sourceTree = "<group>"; };
 		3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraouselViewController.swift; sourceTree = "<group>"; };
 		3A82147429B07E1D00D1D9CB /* Treko-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treko-New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 				3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */,
 				9939109C29CB0DE40097E2A5 /* OnboardingViewController.swift */,
 				993E09D929D54D3C0066B57B /* TrekViewController.swift */,
+				3A5B36332A167C120071550B /* StoryviewPageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				3A0B2A3F29CDA5B200A02EFB /* StoriesFeedTableViewCell.swift in Sources */,
 				3A3DC96329D43AA2000E859E /* APICalls.swift in Sources */,
 				3AF9219329D72BF600DD2716 /* Cell1CollectionViewCell.swift in Sources */,
+				3A5B36342A167C120071550B /* StoryviewPageViewController.swift in Sources */,
 				3A3DC96529D44213000E859E /* LoginViewController.swift in Sources */,
 				9939109D29CB0DE40097E2A5 /* OnboardingViewController.swift in Sources */,
 				3AD233DC29DF6B1000578BED /* ExploreMainCollectionViewCell.swift in Sources */,
