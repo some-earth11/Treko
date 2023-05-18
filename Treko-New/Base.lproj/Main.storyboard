@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSl-Zn-fh8">
-                                <rect key="frame" x="0.0" y="0.0" width="506" height="932"/>
+                                <rect key="frame" x="0.0" y="0.0" width="496" height="932"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="INz-Kp-AoS" userLabel="Scroll Stack View">
-                                        <rect key="frame" x="5" y="0.0" width="496" height="1739"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="496" height="1739"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="W6x-XY-wIO" userLabel="Top Bar Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="496" height="34.333333333333336"/>
@@ -471,16 +471,14 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="mf4-o1-SKs" firstAttribute="centerX" secondItem="INz-Kp-AoS" secondAttribute="centerX" id="Lbh-J6-LQM"/>
-                                            <constraint firstItem="mf4-o1-SKs" firstAttribute="leading" secondItem="INz-Kp-AoS" secondAttribute="leading" constant="10" id="OPh-LW-9Kn"/>
-                                            <constraint firstAttribute="trailing" secondItem="mf4-o1-SKs" secondAttribute="trailing" constant="10" id="X79-pT-sdg"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="INz-Kp-AoS" firstAttribute="centerX" secondItem="qSl-Zn-fh8" secondAttribute="centerX" id="FPA-ie-WTW"/>
-                                    <constraint firstItem="INz-Kp-AoS" firstAttribute="trailing" secondItem="7zP-rU-BvY" secondAttribute="trailing" constant="5" id="Nol-gE-exF"/>
+                                    <constraint firstItem="INz-Kp-AoS" firstAttribute="trailing" secondItem="7zP-rU-BvY" secondAttribute="trailing" id="Nol-gE-exF"/>
                                     <constraint firstItem="INz-Kp-AoS" firstAttribute="top" secondItem="7zP-rU-BvY" secondAttribute="top" id="aAt-Pu-Iz4"/>
-                                    <constraint firstItem="INz-Kp-AoS" firstAttribute="leading" secondItem="7zP-rU-BvY" secondAttribute="leading" constant="5" id="gxa-pL-GtV"/>
+                                    <constraint firstItem="INz-Kp-AoS" firstAttribute="leading" secondItem="7zP-rU-BvY" secondAttribute="leading" id="gxa-pL-GtV"/>
                                     <constraint firstItem="INz-Kp-AoS" firstAttribute="bottom" secondItem="7zP-rU-BvY" secondAttribute="bottom" id="saS-5a-kfS"/>
                                     <constraint firstItem="INz-Kp-AoS" firstAttribute="centerX" secondItem="qSl-Zn-fh8" secondAttribute="centerX" id="soG-J1-nEy"/>
                                 </constraints>

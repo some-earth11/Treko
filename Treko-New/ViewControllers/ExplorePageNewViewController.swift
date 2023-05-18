@@ -9,11 +9,25 @@ import UIKit
 
 class ExplorePageNewViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
+    var imageArr = ["mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3",]
+    
+    func shuffleArray<T>(_ array: inout [T]) {
+        for i in stride(from: array.count - 1, to: 0, by: -1) {
+            let j = Int(arc4random_uniform(UInt32(i + 1)))
+            if i != j {
+                array.swapAt(i, j)
+            }
+        }
+    }
+    
+
+    
     private let cellIdentifier = "CellIdentifier"
     private var collectionView: UICollectionView!
     private var searchBar: UISearchBar!
 
     override func viewDidLoad() {
+        imageArr.shuffle()
         super.viewDidLoad()
 
         // Create the collection view layout
@@ -52,15 +66,34 @@ class ExplorePageNewViewController: UIViewController, UICollectionViewDataSource
     // MARK: - Collection View Data Source
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9*2 // Change this value to the desired number of items
+        return imageArr.count // Change this value to the desired number of items
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "Post_viewViewController") as? Post_viewViewController
+//        let datas = data[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+              let secondViewController = storyboard.instantiateViewController(withIdentifier: "Post_viewViewController") as! Post_viewViewController
+        
+        secondViewController.profile_image = UIImage(named: "profile")!
+        secondViewController.location_label = "Location"
+        secondViewController.name_label = "Name"
+        secondViewController.post_image = UIImage(named: imageArr[indexPath.row])!
+              self.present(secondViewController, animated: true, completion: nil)
+//        secondViewController.location_label
+//
+
+//        vc?.comments =
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        break;
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         cell.backgroundColor = UIColor.lightGray
-
+//        print(indexPath)
         // Configure the cell with an image
-        let imageView = UIImageView(image: UIImage(named: "mountain1"))
+        let imageView = UIImageView(image: UIImage(named: imageArr[indexPath.row]))
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.frame = cell.contentView.bounds
