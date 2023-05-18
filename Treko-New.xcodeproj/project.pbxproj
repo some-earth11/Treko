@@ -16,6 +16,8 @@
 		3A3DC96329D43AA2000E859E /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DC96229D43AA2000E859E /* APICalls.swift */; };
 		3A3DC96529D44213000E859E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DC96429D44213000E859E /* LoginViewController.swift */; };
 		3A4F46C129DDFBA900B727D1 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4F46C029DDFBA900B727D1 /* AddPostViewController.swift */; };
+		3A5B36302A166E940071550B /* ExploreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B362F2A166E940071550B /* ExploreStoryboard.storyboard */; };
+		3A5B36322A166F2B0071550B /* ExplorePageNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B36312A166F2B0071550B /* ExplorePageNewViewController.swift */; };
 		3A64D20A29C2CFA900C135F6 /* ChattingPage_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */; };
 		3A7BE3BD29D61E2A009FD890 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7BE3BC29D61E2A009FD890 /* TestStoryboard.storyboard */; };
 		3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */; };
@@ -57,6 +59,8 @@
 		3A3DC96229D43AA2000E859E /* APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
 		3A3DC96429D44213000E859E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3A4F46C029DDFBA900B727D1 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		3A5B362F2A166E940071550B /* ExploreStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExploreStoryboard.storyboard; sourceTree = "<group>"; };
+		3A5B36312A166F2B0071550B /* ExplorePageNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorePageNewViewController.swift; sourceTree = "<group>"; };
 		3A64D20929C2CFA900C135F6 /* ChattingPage_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingPage_TableViewCell.swift; sourceTree = "<group>"; };
 		3A7BE3BC29D61E2A009FD890 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
 		3A7C0AC929BF6D8F00DAD1E0 /* CaraouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraouselViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				3AD233D729DF597B00578BED /* NewExploreViewController.swift */,
 				3AB2681B29BDB457001926D5 /* ChatingPageViewController.swift */,
 				3A3DC96429D44213000E859E /* LoginViewController.swift */,
+				3A5B36312A166F2B0071550B /* ExplorePageNewViewController.swift */,
 				3A24E62C29DD48D8007CBF34 /* RegisterViewController.swift */,
 				3AEF893029C231A70034B82E /* Post_viewViewController.swift */,
 				3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */,
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				3A7BE3BC29D61E2A009FD890 /* TestStoryboard.storyboard */,
+				3A5B362F2A166E940071550B /* ExploreStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A82148429B07E1E00D1D9CB /* LaunchScreen.storyboard in Resources */,
+				3A5B36302A166E940071550B /* ExploreStoryboard.storyboard in Resources */,
 				3A7BE3BD29D61E2A009FD890 /* TestStoryboard.storyboard in Resources */,
 				3A82148129B07E1E00D1D9CB /* Assets.xcassets in Resources */,
 				3A82147F29B07E1D00D1D9CB /* Main.storyboard in Resources */,
@@ -304,6 +311,7 @@
 				3A7C0ACA29BF6D8F00DAD1E0 /* CaraouselViewController.swift in Sources */,
 				3AD233D829DF597B00578BED /* NewExploreViewController.swift in Sources */,
 				3AB2681E29BDBE44001926D5 /* FeedTableViewCell.swift in Sources */,
+				3A5B36322A166F2B0071550B /* ExplorePageNewViewController.swift in Sources */,
 				3A0B2A3F29CDA5B200A02EFB /* StoriesFeedTableViewCell.swift in Sources */,
 				3A3DC96329D43AA2000E859E /* APICalls.swift in Sources */,
 				3AF9219329D72BF600DD2716 /* Cell1CollectionViewCell.swift in Sources */,
