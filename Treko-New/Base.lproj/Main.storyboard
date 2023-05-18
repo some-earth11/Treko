@@ -678,6 +678,9 @@
                                                         <buttonConfiguration key="configuration" style="gray" image="phone" catalog="system">
                                                             <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="phoneTapped:" destination="ohy-2g-5fK" eventType="touchUpInside" id="3sZ-SV-B7I"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqf-iC-RYx">
                                                         <rect key="frame" x="50" y="18.000000000000004" width="50" height="34.333333333333343"/>
@@ -1776,21 +1779,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHJ-g1-dye" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="273.48837209302326" y="-1624.2489270386268"/>
-        </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="8wk-gF-7Kp">
-            <objects>
-                <viewController id="KAA-F3-t1b" customClass="ProfileViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ahB-pR-C7f">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="hNi-gE-LWw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xmk-PN-VYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="273" y="-873"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="y1U-bM-Pz1">

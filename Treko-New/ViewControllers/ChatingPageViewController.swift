@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
-class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+import StoreKit
+class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, SKStoreProductViewControllerDelegate {
 
     @IBOutlet var table: UITableView!
     @IBOutlet weak var description_profile: UILabel!
@@ -30,6 +30,30 @@ class ChatingPageViewController: UIViewController,UITableViewDelegate,UITableVie
         description_profile.text = profile_description
         profileImage.image = profile_Image
     }
+    
+    
+    @IBAction func phoneTapped(_ sender: Any) {
+         let phoneNumber = "1234567890" // Replace with the desired phone number
+         
+         let storeViewController = SKStoreProductViewController()
+         storeViewController.delegate = self
+         
+         let parameters: [String: Any] = [
+             SKStoreProductParameterITunesItemIdentifier: phoneNumber
+         ]
+         
+         storeViewController.loadProduct(withParameters: parameters) { [weak self] (_, error) in
+             if let error = error {
+                 print("Failed to load product view controller: \(error.localizedDescription)")
+                 return
+             }
+             
+             DispatchQueue.main.async {
+                 self?.present(storeViewController, animated: true, completion: nil)
+             }
+         }
+     }
+    
     
     @IBAction func sendBtnClicked(_ sender: UIButton) {
         if(messageTextField.text != ""){
