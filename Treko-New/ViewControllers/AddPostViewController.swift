@@ -1,4 +1,5 @@
 import UIKit
+import MapKit
 
 class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -36,6 +37,16 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func selectLocationTapped(_ sender: Any) {
+        let mapViewController = MapViewController()
+        mapViewController.completion = { [weak self] address, coordinate in
+//            self.location.text = "address"
+        }
+        
+        let navigationController = UINavigationController(rootViewController: mapViewController)
+        present(navigationController, animated: true, completion: nil)
     }
     
     @IBAction func addPostClicked(_ sender: Any) {
@@ -89,5 +100,44 @@ class AddPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+}
+class MapViewController: UIViewController, MKMapViewDelegate {
+
+    var mapView: MKMapView!
+    var completion: ((String?, CLLocationCoordinate2D?) -> Void)?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mapView = MKMapView(frame: view.bounds)
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+        view.addSubview(mapView)
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneTapped))
+        navigationItem.rightBarButtonItem = doneButton
+    }
+    
+    @objc func doneTapped() {
+        if let selectedAnnotation = mapView.selectedAnnotations.first {
+            let coordinate = selectedAnnotation.coordinate
+            let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            CLGeocoder().reverseGeocodeLocation(location) { (placemarks, error) in
+                if let placemark = placemarks?.first {
+                    let address = "\(placemark.name ?? ""), \(placemark.locality ?? ""), \(placemark.administrativeArea ?? "")"
+                    self.completion?(address, coordinate)
+                } else {
+                    self.completion?(nil, nil)
+                }
+            }
+        } else {
+            completion?(nil, nil)
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        mapView.deselectAnnotation(view.annotation, animated: true)
     }
 }

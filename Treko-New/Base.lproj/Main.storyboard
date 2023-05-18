@@ -1186,44 +1186,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f1e-uz-m1a">
-                                <rect key="frame" x="0.0" y="203" width="512" height="546"/>
+                                <rect key="frame" x="15" y="203" width="400" height="546"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treko logo" translatesAutoresizingMaskIntoConstraints="NO" id="Or9-23-6FK">
-                                        <rect key="frame" x="0.0" y="0.0" width="512" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="fdp-lE-SNT"/>
                                             <constraint firstAttribute="height" constant="100" id="mhZ-Nb-5YF"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Add Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnY-Cr-4AD">
-                                        <rect key="frame" x="0.0" y="114" width="512" height="48"/>
+                                        <rect key="frame" x="0.0" y="114" width="400" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Clc-1i-18W">
-                                        <rect key="frame" x="0.0" y="175.66666666666669" width="512" height="178"/>
-                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epC-5m-jsa">
+                                        <rect key="frame" x="0.0" y="175.66666666666669" width="400" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tI-M4-hEQ">
-                                        <rect key="frame" x="0.0" y="367.66666666666663" width="512" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="223.66666666666669" width="400" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Upload"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Select image"/>
                                         <connections>
                                             <action selector="selectImageTapped:" destination="rBA-IP-LW0" eventType="touchUpInside" id="8tY-Hl-YVt"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epC-5m-jsa">
-                                        <rect key="frame" x="0.0" y="416" width="512" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-fY-Tfx">
-                                        <rect key="frame" x="0.0" y="463.66666666666663" width="512" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Clc-1i-18W">
+                                        <rect key="frame" x="0.0" y="271.66666666666669" width="400" height="178"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h2-DC-en6">
+                                        <rect key="frame" x="0.0" y="463.66666666666663" width="400" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Select Location"/>
+                                        <connections>
+                                            <action selector="selectLocationTapped:" destination="rBA-IP-LW0" eventType="touchUpInside" id="mxS-Zc-s0s"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-lC-OYV">
-                                        <rect key="frame" x="0.0" y="511.66666666666657" width="512" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="511.66666666666657" width="400" height="34.333333333333314"/>
                                         <color key="tintColor" red="0.37647058820000001" green="0.2901960784" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Add Post"/>
@@ -1232,21 +1235,22 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="bsK-j8-eZe"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="efj-gG-dhs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="f1e-uz-m1a" firstAttribute="top" secondItem="efj-gG-dhs" secondAttribute="top" constant="100" id="7hE-ig-dGX"/>
-                            <constraint firstItem="efj-gG-dhs" firstAttribute="trailing" secondItem="f1e-uz-m1a" secondAttribute="trailing" id="95l-en-i5n"/>
                             <constraint firstItem="efj-gG-dhs" firstAttribute="bottom" secondItem="f1e-uz-m1a" secondAttribute="bottom" constant="100" id="ARe-4h-VTt"/>
-                            <constraint firstItem="f1e-uz-m1a" firstAttribute="leading" secondItem="efj-gG-dhs" secondAttribute="leading" id="reh-CN-taB"/>
+                            <constraint firstItem="f1e-uz-m1a" firstAttribute="centerX" secondItem="9tn-V2-LHO" secondAttribute="centerX" id="YIU-GK-LwN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Txz-YU-Qah"/>
                     <connections>
                         <outlet property="imageView" destination="Clc-1i-18W" id="G35-PQ-mXj"/>
-                        <outlet property="location" destination="KNB-fY-Tfx" id="DIP-ue-Elh"/>
                         <outlet property="postDescription" destination="epC-5m-jsa" id="jJF-VF-9YC"/>
                     </connections>
                 </viewController>
@@ -1772,6 +1776,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHJ-g1-dye" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="273.48837209302326" y="-1624.2489270386268"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="8wk-gF-7Kp">
+            <objects>
+                <viewController id="KAA-F3-t1b" customClass="ProfileViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ahB-pR-C7f">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hNi-gE-LWw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmk-PN-VYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="-873"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="y1U-bM-Pz1">
