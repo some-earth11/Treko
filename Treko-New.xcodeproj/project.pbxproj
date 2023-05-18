@@ -28,6 +28,7 @@
 		3A82147F29B07E1D00D1D9CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A82147D29B07E1D00D1D9CB /* Main.storyboard */; };
 		3A82148129B07E1E00D1D9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A82148029B07E1E00D1D9CB /* Assets.xcassets */; };
 		3A82148429B07E1E00D1D9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A82148229B07E1E00D1D9CB /* LaunchScreen.storyboard */; };
+		3A8F88462A16C62300D78B1C /* MagazineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F88452A16C62300D78B1C /* MagazineViewController.swift */; };
 		3AA4EC1929D28EBD00C7D446 /* DataForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA4EC1829D28EBD00C7D446 /* DataForms.swift */; };
 		3AACD58129BA65A600B96F54 /* ChatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */; };
 		3AACD58429BB068500B96F54 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AACD58329BB068500B96F54 /* ChatTableViewCell.swift */; };
@@ -74,6 +75,7 @@
 		3A82148029B07E1E00D1D9CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A82148329B07E1E00D1D9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A82148529B07E1E00D1D9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A8F88452A16C62300D78B1C /* MagazineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineViewController.swift; sourceTree = "<group>"; };
 		3AA4EC1829D28EBD00C7D446 /* DataForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForms.swift; sourceTree = "<group>"; };
 		3AACD58029BA65A600B96F54 /* ChatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageViewController.swift; sourceTree = "<group>"; };
 		3AACD58329BB068500B96F54 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				3AE1423E29B6FAB20054EF91 /* ProfileViewController.swift */,
+				3A8F88452A16C62300D78B1C /* MagazineViewController.swift */,
 				3A4F46C029DDFBA900B727D1 /* AddPostViewController.swift */,
 				3A34AC3B29CA5E4700AF4B71 /* ExplorePageViewController.swift */,
 				3AD233D729DF597B00578BED /* NewExploreViewController.swift */,
@@ -335,6 +338,7 @@
 				993E09DC29D5592E0066B57B /* TrekCollectionViewCell.swift in Sources */,
 				3A08F69F29CA25E4001DDDB1 /* FeedTopTableViewCell.swift in Sources */,
 				3AACD58429BB068500B96F54 /* ChatTableViewCell.swift in Sources */,
+				3A8F88462A16C62300D78B1C /* MagazineViewController.swift in Sources */,
 				3AF80BB029C8776200E46C47 /* UserLoggedIn.swift in Sources */,
 				3A4F46C129DDFBA900B727D1 /* AddPostViewController.swift in Sources */,
 				3AD233E029DF741A00578BED /* ExploreLabelCollectionViewCell.swift in Sources */,
