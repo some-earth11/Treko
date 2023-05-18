@@ -52,7 +52,7 @@ class ExplorePageNewViewController: UIViewController, UICollectionViewDataSource
     // MARK: - Collection View Data Source
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9*10 // Change this value to the desired number of items
+        return 9*2 // Change this value to the desired number of items
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
