@@ -5,10 +5,10 @@ class MagazineViewController: UIViewController {
     private var collectionView: UICollectionView!
     private let reuseIdentifier = "MagazineCell"
     private let data = [
-        MagazineCellData(imageName: "mountain1", heading: "Heading 1", description: "Description 1"),
-        MagazineCellData(imageName: "mountain2", heading: "Heading 2", description: "Description 2"),
-        MagazineCellData(imageName: "mountain3", heading: "Heading 3", description: "Description 3"),
-        MagazineCellData(imageName: "mountain4", heading: "Heading 4", description: "Description 4")
+        MagazineCellData(imageURL: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", heading: "Heading 1", description: "Description 1"),
+        MagazineCellData(imageURL: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", heading: "Heading 2", description: "Description 2"),
+        MagazineCellData(imageURL: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", heading: "Heading 3", description: "Description 3"),
+        MagazineCellData(imageURL: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", heading: "Heading 4", description: "Description 4")
     ] // Replace with your own data
     
     override func viewDidLoad() {
@@ -79,7 +79,7 @@ extension MagazineViewController: UICollectionViewDataSource, UICollectionViewDe
 }
 
 struct MagazineCellData {
-    let imageName: String
+    let imageURL: String
     let heading: String
     let description: String
 }
@@ -150,26 +150,22 @@ class MagazineCell: UICollectionViewCell {
             descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
     }
-
-
     
     func configure(with data: MagazineCellData) {
-        imageView.image = UIImage(named: data.imageName)
-                guard let imageUrl = URL(string: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg") else {
-                    return
-                }
-
-                DispatchQueue.global().async {
-                    if let imageData = try? Data(contentsOf: imageUrl) {
-                        DispatchQueue.main.async {
-                            if let image = UIImage(data: imageData) {
-                                self.imageView.image = image
-                            }
-                        }
+        guard let imageUrl = URL(string: data.imageURL) else {
+            return
+        }
+        
+        DispatchQueue.global().async {
+            if let imageData = try? Data(contentsOf: imageUrl) {
+                DispatchQueue.main.async {
+                    if let image = UIImage(data: imageData) {
+                        self.imageView.image = image
                     }
                 }
-
-
+            }
+        }
+        
         headingLabel.text = data.heading
         descriptionLabel.text = data.description
     }
