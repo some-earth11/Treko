@@ -7,7 +7,8 @@
 
 import UIKit
 
-class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class StoriesFeedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
 
 
     
@@ -30,6 +31,47 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
 
         // Configure the view for the selected state
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if(indexPath == [0,0]){
+           let imagePicker = UIImagePickerController()
+           imagePicker.delegate = self
+           if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+               imagePicker.sourceType = .photoLibrary
+               imagePicker.allowsEditing = false
+               imagePicker.modalPresentationStyle = .overFullScreen
+               // Pass any necessary data to the image picker, if needed
+
+               if let viewController = UIApplication.shared.windows.first?.rootViewController?.topmostViewController {
+                   viewController.present(imagePicker, animated: true, completion: nil)
+               }
+           }}else{
+               let storyViewController = StoryviewPageViewController()
+               storyViewController.image = UIImage(named: "mountain1") ?? UIImage()
+               storyViewController.labelText = "Your text"
+
+               if let topmostViewController = UIApplication.shared.windows.first?.rootViewController?.topmostViewController {
+                   topmostViewController.present(storyViewController, animated: true, completion: nil)
+               }
+
+
+           }
+       }
+
+     // MARK: - Image Picker Delegate
+
+     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+         // Handle the selected image
+         if let pickedImage = info[.originalImage] as? UIImage {
+             // Do something with the picked image
+         }
+
+         picker.dismiss(animated: true, completion: nil)
+     }
+
+     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+         picker.dismiss(animated: true, completion: nil)
+     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrDataF.count
@@ -73,4 +115,19 @@ class StoriesFeedTableViewCell: UITableViewCell,UICollectionViewDelegate,UIColle
 //        self.performSegue(withIdentifier: "feedPageStorySegue", sender: sender)
 //    }
 
+}
+
+extension UIViewController {
+    var topmostViewController: UIViewController {
+        if let presentedViewController = presentedViewController {
+            return presentedViewController.topmostViewController
+        }
+        if let navigationController = self as? UINavigationController {
+            return navigationController.visibleViewController?.topmostViewController ?? self
+        }
+        if let tabBarController = self as? UITabBarController {
+            return tabBarController.selectedViewController?.topmostViewController ?? self
+        }
+        return self
+    }
 }

@@ -9,6 +9,15 @@ import Foundation
 import UIKit
 
 
+struct Card {
+    let image: UIImage
+    let title: String
+    let description: String
+    let multilineText: String // New property for multiline text content
+}
+
+
+
 //Feed
 struct Feed{
     var name:String;

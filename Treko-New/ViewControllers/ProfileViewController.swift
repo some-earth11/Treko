@@ -7,7 +7,11 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout  {
+
+    var numOfElements:CGFloat = 5
+    
+    var arrDataF = ["image_story","image_story","image_story","image_story","image_story","image_story"]
     
     @IBOutlet weak var postLabel: UILabel!
     @IBOutlet weak var followingLabel: UILabel!
@@ -17,6 +21,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var profileDescription: UILabel!
     
+    @IBOutlet var collectionView: UICollectionView!
+    
     let userInstance = logged_in_user()
     
     var defaults = UserDefaults.standard
@@ -25,6 +31,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         title = "Profile"
         let loggedInUser = userInstance.userDetails
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
 
         postLabel.text = String(loggedInUser!.numberOfPosts)
         followingLabel.text = String(loggedInUser!.numberOfFollowing)
@@ -34,6 +43,23 @@ class ProfileViewController: UIViewController {
         fullName.text = loggedInUser!.fullName
         profileDescription.text = loggedInUser!.profileDescription
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrDataF.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoriesFeedCollectionViewCell", for: indexPath) as! StoriesFeedCollectionViewCell
+        cell.imagesView.image = UIImage(named: arrDataF[indexPath.row])
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionWidth = collectionView.bounds.width
+        let collectionHeight = collectionView.bounds.height
+        return CGSize(width: collectionWidth/numOfElements, height: collectionHeight)
+    }
+    
+    
     
     
     @IBAction func logOutClicked(_ sender: Any) {
