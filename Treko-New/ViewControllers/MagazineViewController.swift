@@ -3,6 +3,8 @@ import UIKit
 class MagazineViewController: UIViewController {
     
     // MARK: - Properties
+    private var cardData: [Card] = []
+     private var gridData: [UIImage?] = []
     
     private let collectionViewLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -27,26 +29,37 @@ class MagazineViewController: UIViewController {
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.placeholder = "Search"
         return searchBar
     }()
     
-    private let cardData: [Card] = [
-        Card(image: UIImage(named: "mountain1"), title: "Card 1", description: "This is the first card"),
-        Card(image: UIImage(named: "mountain1"), title: "Card 2", description: "This is the second card"),
-        Card(image: UIImage(named: "mountain1"), title: "Card 3", description: "This is the third card")
-    ]
+    var imageArr = ["mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3",]
     
-    private let gridData: [UIImage?] = [
-        UIImage(named: "mountain1"),
-        UIImage(named: "mountain1"),
-        UIImage(named: "mountain1"),
-        UIImage(named: "mountain1"),
-        UIImage(named: "mountain1"),
-        UIImage(named: "mountain1"),
-        UIImage(named: "mountain1"),
-        UIImage(named: "mountain1"),
-        UIImage(named: "mountain1")
-    ]
+
+    
+    
+    private func populateData() {
+        cardData = [
+            Card(image: UIImage(named: imageArr.randomElement() ?? ""), title: "Card 1", description: "This is the first card"),
+            Card(image: UIImage(named: imageArr.randomElement() ?? ""), title: "Card 2", description: "This is the second card"),
+            Card(image: UIImage(named: imageArr.randomElement() ?? ""), title: "Card 3", description: "This is the third card")
+        ]
+
+        gridData = [
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? ""),
+            UIImage(named: imageArr.randomElement() ?? "")
+        ]
+    }
     
     // MARK: - Lifecycle
     
@@ -54,6 +67,7 @@ class MagazineViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupConstraints()
+        populateData()
     }
     
     // MARK: - UI Setup
