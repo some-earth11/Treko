@@ -2,172 +2,285 @@ import UIKit
 
 class MagazineViewController: UIViewController {
     
-    private var collectionView: UICollectionView!
-    private let reuseIdentifier = "MagazineCell"
-    private let data = [
-        MagazineCellData(imageURL: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", heading: "Heading 1", description: "Description 1"),
-        MagazineCellData(imageURL: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", heading: "Heading 2", description: "Description 2"),
-        MagazineCellData(imageURL: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", heading: "Heading 3", description: "Description 3"),
-        MagazineCellData(imageURL: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", heading: "Heading 4", description: "Description 4")
-    ] // Replace with your own data
+    // MARK: - Properties
+    
+    private let collectionViewLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        return layout
+    }()
+    
+    private let cardCollectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.backgroundColor = .white
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+    
+    private let gridCollectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.backgroundColor = .white
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+    
+    private let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        return searchBar
+    }()
+    
+    private let cardData: [Card] = [
+        Card(image: UIImage(named: "mountain1"), title: "Card 1", description: "This is the first card"),
+        Card(image: UIImage(named: "mountain1"), title: "Card 2", description: "This is the second card"),
+        Card(image: UIImage(named: "mountain1"), title: "Card 3", description: "This is the third card")
+    ]
+    
+    private let gridData: [UIImage?] = [
+        UIImage(named: "mountain1"),
+        UIImage(named: "mountain1"),
+        UIImage(named: "mountain1"),
+        UIImage(named: "mountain1"),
+        UIImage(named: "mountain1"),
+        UIImage(named: "mountain1"),
+        UIImage(named: "mountain1"),
+        UIImage(named: "mountain1"),
+        UIImage(named: "mountain1")
+    ]
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-        setupCollectionView()
+        setupUI()
+        setupConstraints()
     }
     
-    private func setupViews() {
-        let headingLabel = UILabel()
-        headingLabel.font = UIFont.boldSystemFont(ofSize: 30)
-        headingLabel.textColor = .black
-        headingLabel.text = "Treko"
-        headingLabel.translatesAutoresizingMaskIntoConstraints = false
+    // MARK: - UI Setup
+    
+    private func setupUI() {
+        view.backgroundColor = .white
+        title = "Treko"
         
-        view.addSubview(headingLabel)
+        collectionViewLayout.scrollDirection = .horizontal
+        
+        cardCollectionView.setCollectionViewLayout(collectionViewLayout, animated: false)
+        cardCollectionView.delegate = self
+        cardCollectionView.dataSource = self
+        cardCollectionView.showsHorizontalScrollIndicator = false
+        cardCollectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: "CardCollectionViewCell")
+        
+        gridCollectionView.delegate = self
+        gridCollectionView.dataSource = self
+        gridCollectionView.showsHorizontalScrollIndicator = false
+        gridCollectionView.register(GridCollectionViewCell.self, forCellWithReuseIdentifier: "GridCollectionViewCell")
+        
+        view.addSubview(searchBar)
+        view.addSubview(cardCollectionView)
+        view.addSubview(gridCollectionView)
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            searchBar.heightAnchor.constraint(equalToConstant: 50)
+        ])
         
         NSLayoutConstraint.activate([
-            headingLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            headingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
+            cardCollectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 8),
+            cardCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            cardCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            cardCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5)
         ])
-    }
-    
-    private func setupCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 20
-        
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height / 2), collectionViewLayout: layout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(MagazineCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.isPagingEnabled = true
-        collectionView.showsHorizontalScrollIndicator = false
-        
-        view.addSubview(collectionView)
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height / 4),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            gridCollectionView.topAnchor.constraint(equalTo: cardCollectionView.bottomAnchor, constant: 8),
+            gridCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            gridCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            gridCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-    
 }
 
-extension MagazineViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+// MARK: - UICollectionViewDataSource
+
+extension MagazineViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        if collectionView == cardCollectionView {
+            return cardData.count
+        } else if collectionView == gridCollectionView {
+            return gridData.count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MagazineCell
-        let cellData = data[indexPath.item]
-        cell.configure(with: cellData)
-        return cell
+        if collectionView == cardCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as! CardCollectionViewCell
+            let card = cardData[indexPath.item]
+            cell.configure(with: card)
+            return cell
+        } else if collectionView == gridCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridCollectionViewCell", for: indexPath) as! GridCollectionViewCell
+            let image = gridData[indexPath.item]
+            cell.configure(with: image)
+            return cell
+        }
+        return UICollectionViewCell()
     }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension MagazineViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width * 0.8
-        let height = collectionView.bounds.height * 0.8
-        return CGSize(width: width, height: height)
+        if collectionView == cardCollectionView {
+            let width = view.frame.width - 16
+            let height = cardCollectionView.frame.height - 16
+            return CGSize(width: width, height: height)
+        } else if collectionView == gridCollectionView {
+            let width = (view.frame.width - 24) / 3
+            let height = width
+            return CGSize(width: width, height: height)
+        }
+        return CGSize.zero
     }
-    
 }
 
-struct MagazineCellData {
-    let imageURL: String
-    let heading: String
-    let description: String
-}
+// MARK: - Custom Cell Classes
 
-class MagazineCell: UICollectionViewCell {
+class CardCollectionViewCell: UICollectionViewCell {
     
-    private let imageView = UIImageView()
-    private let headingLabel = UILabel()
-    private let descriptionLabel = UILabel()
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    private let glassyBackgroundView: UIVisualEffectView = {
+        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+        let view = UIVisualEffectView(effect: blurEffect)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupViews()
+        setupUI()
+        setupConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViews() {
-        layer.cornerRadius = 10
-        layer.masksToBounds = true
-        
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(imageView)
-        
-        let glassBackgroundView = UIView()
-        glassBackgroundView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-        glassBackgroundView.layer.cornerRadius = 10
-        glassBackgroundView.layer.masksToBounds = true
-        glassBackgroundView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(glassBackgroundView)
-        
-        headingLabel.font = UIFont.boldSystemFont(ofSize: 24)
-        headingLabel.textColor = .white
-        headingLabel.backgroundColor = UIColor.white.withAlphaComponent(0.3)
-        headingLabel.layer.cornerRadius = 10
-        headingLabel.layer.masksToBounds = true
-        headingLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(headingLabel)
-        
-        descriptionLabel.font = UIFont.systemFont(ofSize: 16)
-        descriptionLabel.textColor = .white
-        descriptionLabel.backgroundColor = UIColor.white.withAlphaComponent(0.3)
-        descriptionLabel.layer.cornerRadius = 10
-        descriptionLabel.layer.masksToBounds = true
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(descriptionLabel)
+    private func setupUI() {
+        contentView.backgroundColor = .white
+        contentView.addSubview(imageView)
+        contentView.addSubview(glassyBackgroundView)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(descriptionLabel)
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            glassBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            glassBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            glassBackgroundView.bottomAnchor.constraint(equalTo: descriptionLabel.topAnchor, constant: -8),
-            
-            headingLabel.leadingAnchor.constraint(equalTo: glassBackgroundView.leadingAnchor, constant: 16),
-            headingLabel.trailingAnchor.constraint(equalTo: glassBackgroundView.trailingAnchor, constant: -16),
-            headingLabel.bottomAnchor.constraint(equalTo: descriptionLabel.topAnchor, constant: -8),
-            
-            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
+            glassyBackgroundView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            glassyBackgroundView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            glassyBackgroundView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32)
+        ])
+        
+        NSLayoutConstraint.activate([
+            descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
     }
     
-    func configure(with data: MagazineCellData) {
-        guard let imageUrl = URL(string: data.imageURL) else {
-            return
-        }
-        
-        DispatchQueue.global().async {
-            if let imageData = try? Data(contentsOf: imageUrl) {
-                DispatchQueue.main.async {
-                    if let image = UIImage(data: imageData) {
-                        self.imageView.image = image
-                    }
-                }
-            }
-        }
-        
-        headingLabel.text = data.heading
-        descriptionLabel.text = data.description
+    func configure(with card: Card) {
+        imageView.image = card.image
+        titleLabel.text = card.title
+        descriptionLabel.text = card.description
+    }
+}
+
+class GridCollectionViewCell: UICollectionViewCell {
+    
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+        setupConstraints()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupUI() {
+        contentView.backgroundColor = .white
+        contentView.addSubview(imageView)
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
+    }
+    
+    func configure(with image: UIImage?) {
+        imageView.image = image
+    }
+}
+
+// MARK: - Model
+
+struct Card {
+    let image: UIImage?
+    let title: String
+    let description: String
 }
