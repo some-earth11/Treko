@@ -99,8 +99,9 @@ class MagazineViewController: UIViewController {
             gridCollectionView.topAnchor.constraint(equalTo: cardCollectionView.bottomAnchor, constant: 8),
             gridCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             gridCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            gridCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            gridCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(tabBarController?.tabBar.frame.height ?? 0))
         ])
+
     }
 }
 
@@ -221,13 +222,13 @@ class CardCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32)
+            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
         
         NSLayoutConstraint.activate([
             descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            descriptionLabel.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -4)
         ])
     }
     
@@ -277,7 +278,7 @@ class GridCollectionViewCell: UICollectionViewCell {
     }
 }
 
-// MARK: - Model
+// MARK: - Model Classes
 
 struct Card {
     let image: UIImage?
