@@ -38,12 +38,38 @@ class CardCollectionViewCell: UICollectionViewCell {
         label.textColor = .white
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
+//        label.backgroundColor = UIColor(white: 0, alpha: 0.7) // Add background color
+        return label
+    }()
+ 
+    
+    private let multilineTextLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
+    private var isMultilineTextVisible: Bool = false {
+        didSet {
+            multilineTextLabel.isHidden = !isMultilineTextVisible
+            
+            if isMultilineTextVisible {
+                titleLabel.isHidden = true
+                descriptionLabel.isHidden = true
+            } else {
+                titleLabel.isHidden = false
+                descriptionLabel.isHidden = false
+            }
+        }
+    }
+
     override var isHighlighted: Bool {
         didSet {
-            overlayView.backgroundColor = isHighlighted ? UIColor.black.withAlphaComponent(0.7) : UIColor.clear
+            overlayView.backgroundColor = isHighlighted ? UIColor.black.withAlphaComponent(0.5) : UIColor.clear
+            isMultilineTextVisible = isHighlighted
         }
     }
     
@@ -63,11 +89,12 @@ class CardCollectionViewCell: UICollectionViewCell {
         contentView.backgroundColor = .white
         contentView.addSubview(imageView)
         contentView.addSubview(overlayView)
+        imageView.addSubview(multilineTextLabel)
         overlayView.addSubview(textContainerView)
         textContainerView.addSubview(titleLabel)
         textContainerView.addSubview(descriptionLabel)
     }
-    
+
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -101,6 +128,12 @@ class CardCollectionViewCell: UICollectionViewCell {
             descriptionLabel.trailingAnchor.constraint(equalTo: textContainerView.trailingAnchor),
             descriptionLabel.bottomAnchor.constraint(equalTo: textContainerView.bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            multilineTextLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 16),
+            multilineTextLabel.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -16),
+            multilineTextLabel.centerYAnchor.constraint(equalTo: imageView.centerYAnchor)
+        ])
     }
     
     private func applyCardStyle() {
@@ -119,13 +152,21 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     @objc private func handleTap(_ gesture: UITapGestureRecognizer) {
-        // Handle tap event
+        if gesture.state == .ended {
+            isMultilineTextVisible = !isMultilineTextVisible
+        }
     }
+
+
     
     func configure(with card: Card) {
         imageView.image = card.image
         titleLabel.text = card.title
         descriptionLabel.text = card.description
+        multilineTextLabel.text = card.multilineText
+        
+        titleLabel.isHidden = isMultilineTextVisible
+        descriptionLabel.isHidden = isMultilineTextVisible
     }
-}
 
+}

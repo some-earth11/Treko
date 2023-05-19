@@ -35,14 +35,17 @@ class MagazineViewController: UIViewController {
     
     var imageArr = ["mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3",]
     
+    
+    var multiLineTextSample = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sapien enim, vestibulum eu congue quis, ultricies non nulla. Aenean iaculis, lorem quis varius pharetra, mi diam fringilla nulla, eu dictum ligula libero ut nulla. Aliquam vitae nibh sit amet turpis ornare blandit. Morbi posuere faucibus ex. Integer commodo tempus pharetra. Sed cursus vel lorem vel sodales. Suspendisse sit amet ligula ante. Sed placerat massa non feugiat sodales. Nunc mattis, massa vitae lacinia scelerisque, purus libero bibendum sapien, id tristique nisl lacus a turpis. In laoreet bibendum libero. Maecenas at elit egestas dolor porta tristique quis vel ligula."
+    
 
     
     
     private func populateData() {
         cardData = [
-            Card(image: UIImage(named: imageArr.randomElement() ?? ""), title: "Card 1", description: "This is the first card"),
-            Card(image: UIImage(named: imageArr.randomElement() ?? ""), title: "Card 2", description: "This is the second card"),
-            Card(image: UIImage(named: imageArr.randomElement() ?? ""), title: "Card 3", description: "This is the third card")
+            Card(image: UIImage(named: imageArr.randomElement() ?? "")!, title: "Card 1", description: "This is the first card", multilineText: multiLineTextSample),
+            Card(image: UIImage(named: imageArr.randomElement() ?? "")!, title: "Card 2", description: "This is the second card", multilineText: multiLineTextSample),
+            Card(image: UIImage(named: imageArr.randomElement() ?? "")!, title: "Card 3", description: "This is the third card", multilineText: multiLineTextSample)
         ]
 
         gridData = [
@@ -106,7 +109,7 @@ class MagazineViewController: UIViewController {
             cardCollectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 8),
             cardCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             cardCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            cardCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5)
+            cardCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/2.3) // Change the multiplier to 1/3
         ])
         
         NSLayoutConstraint.activate([
@@ -115,8 +118,8 @@ class MagazineViewController: UIViewController {
             gridCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             gridCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(tabBarController?.tabBar.frame.height ?? 0))
         ])
-
     }
+
 }
 
 // MARK: - UICollectionViewDataSource
@@ -166,20 +169,4 @@ extension MagazineViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: - Custom Cell Classes
 
-
-
-
-
-
-
-
-
-// MARK: - Model Classes
-
-struct Card {
-    let image: UIImage?
-    let title: String
-    let description: String
-}
