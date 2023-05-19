@@ -155,6 +155,21 @@ class MagazineCell: UICollectionViewCell {
     
     func configure(with data: MagazineCellData) {
         imageView.image = UIImage(named: data.imageName)
+                guard let imageUrl = URL(string: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg") else {
+                    return
+                }
+
+                DispatchQueue.global().async {
+                    if let imageData = try? Data(contentsOf: imageUrl) {
+                        DispatchQueue.main.async {
+                            if let image = UIImage(data: imageData) {
+                                self.imageView.image = image
+                            }
+                        }
+                    }
+                }
+
+
         headingLabel.text = data.heading
         descriptionLabel.text = data.description
     }
