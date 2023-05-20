@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8ud-y0-Fuf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gHr-rc-AfG">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -1141,41 +1141,6 @@
             </objects>
             <point key="canvasLocation" x="4586.5116279069771" y="-1624.2489270386268"/>
         </scene>
-        <!--Storyview Page View Controller-->
-        <scene sceneID="hW1-2Q-w63">
-            <objects>
-                <viewController id="pzI-li-xgN" customClass="StoryviewPageViewController" customModule="Treko_New" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Y8e-6z-wyL">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_story" translatesAutoresizingMaskIntoConstraints="NO" id="4Of-1O-j4I">
-                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GR-Dc-Jre">
-                                <rect key="frame" x="20" y="79" width="49" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="RkJ-jX-dma"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.51748758279999996" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="RkJ-jX-dma" firstAttribute="bottom" secondItem="4Of-1O-j4I" secondAttribute="bottom" id="RYd-76-Hsy"/>
-                            <constraint firstItem="4Of-1O-j4I" firstAttribute="leading" secondItem="RkJ-jX-dma" secondAttribute="leading" id="VUW-g5-qh8"/>
-                            <constraint firstItem="RkJ-jX-dma" firstAttribute="trailing" secondItem="4Of-1O-j4I" secondAttribute="trailing" id="WHQ-LF-8Zv"/>
-                            <constraint firstItem="7GR-Dc-Jre" firstAttribute="top" secondItem="RkJ-jX-dma" secondAttribute="top" constant="20" id="c2m-Qk-xOV"/>
-                            <constraint firstItem="7GR-Dc-Jre" firstAttribute="leading" secondItem="RkJ-jX-dma" secondAttribute="leading" constant="20" id="c7g-SK-unG"/>
-                            <constraint firstItem="4Of-1O-j4I" firstAttribute="top" secondItem="RkJ-jX-dma" secondAttribute="top" id="uIE-aA-GLe"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="nHD-di-kkA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="32Y-DF-rHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3680" y="-2450"/>
-        </scene>
         <!--Add Post View Controller-->
         <scene sceneID="6QT-BG-Lgs">
             <objects>
@@ -2195,7 +2160,6 @@
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
-        <image name="image_story" width="183" height="275"/>
         <image name="location" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass.circle" catalog="system" width="128" height="123"/>
         <image name="message.badge" catalog="system" width="128" height="116"/>
