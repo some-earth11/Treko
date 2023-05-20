@@ -72,9 +72,25 @@ class MagazineViewController: UIViewController {
         setupUI()
         setupConstraints()
         populateData()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(gridCollectionViewTapped(_:)))
+             gridCollectionView.addGestureRecognizer(tapGesture)
     }
     
     // MARK: - UI Setup
+    
+    @objc private func gridCollectionViewTapped(_ sender: UITapGestureRecognizer) {
+          let indexPath = gridCollectionView.indexPathForItem(at: sender.location(in: gridCollectionView))
+          
+          if let indexPath = indexPath {
+              let selectedImage = gridData[indexPath.item]
+              
+              let cardViewController = CardViewController()
+              cardViewController.image = selectedImage
+              cardViewController.modalPresentationStyle = .overFullScreen
+              
+              present(cardViewController, animated: true, completion: nil)
+          }
+      }
     
     private func setupUI() {
         view.backgroundColor = .white
@@ -169,5 +185,3 @@ extension MagazineViewController: UICollectionViewDelegateFlowLayout {
         return CGSize.zero
     }
 }
-
-
