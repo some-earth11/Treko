@@ -77,6 +77,7 @@ struct API {
                 let responseData = try JSONDecoder().decode([String:String].self, from: data)
                 completionHandler(.success(responseData))
             } catch {
+                print("Error",error)
                 completionHandler(.failure(error))
             }
         }

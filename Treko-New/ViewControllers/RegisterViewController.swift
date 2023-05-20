@@ -1,6 +1,7 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    var defaults = UserDefaults.standard
     
     private let scrollView: UIScrollView = {
           let scrollView = UIScrollView()
@@ -259,9 +260,28 @@ class RegisterViewController: UIViewController {
          return button
      }()
     
+    private let loginButton: UIButton = {
+         let button = UIButton(type: .system)
+         button.setTitle("Login", for: .normal)
+        button.backgroundColor =  UIColor(red: 96/255, green: 74/255, blue: 152/255, alpha: 1.0)
+         button.setTitleColor(.white, for: .normal)
+//         button.layer.cornerRadius = 20
+         button.translatesAutoresizingMaskIntoConstraints = false
+        
+         return button
+     }()
+    
+    private let imageIcon:UIImageView = {
+        let image = UIImage(named: "AppIcon")
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
+        return imageView
+    }()
+    
     private let apiCall = API()
     
     override func viewDidLoad() {
+        defaults = UserDefaults.standard
         super.viewDidLoad()
         setupUI()
         setupConstraints()
@@ -271,6 +291,7 @@ class RegisterViewController: UIViewController {
     }
     private func setupActions() {
           registerButton.addTarget(self, action: #selector(registerClicked), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginClicked), for: .touchUpInside)
       }
     private func setupDatePicker() {
          dobTextField.inputView = dobDatePicker
@@ -296,6 +317,11 @@ class RegisterViewController: UIViewController {
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
+        let iconContainerView = UIView()
+         iconContainerView.translatesAutoresizingMaskIntoConstraints = false
+         iconContainerView.addSubview(imageIcon)
+         contentView.addSubview(iconContainerView)
+//        contentView.addSubview(imageIcon)
         contentView.addSubview(usernameTextField)
         contentView.addSubview(passwordTextField)
         contentView.addSubview(emailTextField)
@@ -304,6 +330,7 @@ class RegisterViewController: UIViewController {
         contentView.addSubview(dobTextField)
         contentView.addSubview(profileDescTextField)
         contentView.addSubview(registerButton)
+        contentView.addSubview(loginButton)
 
             scrollView.addSubview(contentView)
             contentView.addSubview(usernameTextField)
@@ -314,6 +341,7 @@ class RegisterViewController: UIViewController {
     }
     
     private func setupConstraints() {
+
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -330,7 +358,14 @@ class RegisterViewController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            usernameTextField.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            imageIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            imageIcon.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            imageIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            imageIcon.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        NSLayoutConstraint.activate([
+            usernameTextField.topAnchor.constraint(equalTo: imageIcon.topAnchor, constant: 16),
             usernameTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             usernameTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             usernameTextField.heightAnchor.constraint(equalToConstant: 40)
@@ -386,8 +421,25 @@ class RegisterViewController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            contentView.bottomAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 16)
+            loginButton.topAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 16),
+            loginButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            loginButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            loginButton.heightAnchor.constraint(equalToConstant: 40)
         ])
+        
+        NSLayoutConstraint.activate([
+            contentView.bottomAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 16)
+        ])
+    }
+    
+    @objc private func loginClicked(){
+        print("here")
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            tabBarController.modalPresentationStyle = .fullScreen
+            self.present(tabBarController, animated: true, completion: nil)
+        }
     }
     
     @objc private func registerClicked() {
@@ -410,6 +462,7 @@ class RegisterViewController: UIViewController {
               }
               let epochTimestamp = Int(dobDate.timeIntervalSince1970)
         
+        print("Epooch",epochTimestamp)
         let parameters = [
             "username": username,
             "password": password,
@@ -424,7 +477,22 @@ class RegisterViewController: UIViewController {
             switch result {
             case .success(let responseData):
                 if responseData["msg"] == "Welcome to the club!" {
-                    self.handleLogin()
+                    let parameters = [ "username" :username,
+                                       "password": password ]
+                    self.apiCall.POST(parameters: parameters,route:"/login") { result in
+                        switch result {
+                        case .success(let responseData):
+                            if(responseData["msg"]! == "Welcome back!"){
+
+                                self.handleLogin(username: username)
+                            }else{
+                                self.handleError(msg: responseData["msg"]!)
+                            }
+                        case .failure(let error):
+                            print("Err",error)
+                            self.handleError(msg: "Error in server")
+                        }
+                    }
                 }
             case .failure(let error):
                 print("Error", error)
@@ -432,12 +500,21 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    private func handleLogin() {
+    private func handleLogin(username:String) {
         DispatchQueue.main.async {
+            self.defaults.set(username,forKey: "user")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let tabBarController = storyboard.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
             tabBarController.modalPresentationStyle = .fullScreen
             self.present(tabBarController, animated: true, completion: nil)
+        }
+    }
+    private func handleError(msg:String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel,handler: {action in print("Tapped dismiss")}))
+            self.present(alert,animated: true)
         }
     }
 }
