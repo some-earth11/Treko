@@ -9,7 +9,7 @@ import UIKit
 
 class ExplorePageNewViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
-    var imageArr = ["mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3","mountain1","mountain2","mountain3",]
+    var imageArr = ["mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9",]
     
     func shuffleArray<T>(_ array: inout [T]) {
         for i in stride(from: array.count - 1, to: 0, by: -1) {

@@ -496,6 +496,7 @@ class RegisterViewController: UIViewController {
                 }
             case .failure(let error):
                 print("Error", error)
+                self.handleError(msg: "Error in server")
             }
         }
     }
