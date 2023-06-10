@@ -111,9 +111,20 @@ class ExplorePageNewViewController: UIViewController, UICollectionViewDataSource
     }
 
     // MARK: - Search Bar Delegate
+//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+//        let storyboard = UIStoryboard(name: "ExploreStoryboard", bundle: nil)
+//        let resultsViewController = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
+//        self.present(resultsViewController, animated: true, completion: nil)
+//    }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if(searchBar.text != ""){
+            let storyboard = UIStoryboard(name: "ExploreStoryboard", bundle: nil)
+            let resultsViewController = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
+            self.present(resultsViewController, animated: true, completion: nil)
+        }
         // Perform search or filter operation based on the search text
     }
 }
 
+//import UIKit

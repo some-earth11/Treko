@@ -12,7 +12,7 @@ class ExplorePageViewController: UIViewController,UICollectionViewDelegate,UICol
     @IBOutlet weak var collectionView: UICollectionView!
     
     var arrData = ["profile","profile","profile","profile","profile","profile","profile","profile","profile","profile","profile","profile","profile","profile","profile","profile"]
-    var arrData1 = ["mountain1","mountain1","mountain1","mountain1","mountain1","mountain1","mountain1","mountain1","mountain1","mountain1","mountain1"]
+    var arrData1 = ["mountain1","mountain2","mountain3","mountain4","mountain5","mountain1","mountain2","mountain3","mountain4","mountain5","mountain1"]
 
     var data:[Int:[String]] = [:]
     

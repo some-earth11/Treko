@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HeaderSearchCollectionViewCell" id="gTV-IL-0wX" customClass="HeaderSearchCollectionViewCell" customModule="Treko_New" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="45"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="130" height="45"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aR-zT-bQU">
+                        <rect key="frame" x="1" y="1" width="128" height="43"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="9aR-zT-bQU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="1" id="AlB-UU-1g4"/>
+                <constraint firstAttribute="bottom" secondItem="9aR-zT-bQU" secondAttribute="bottom" constant="1" id="KKk-US-xjo"/>
+                <constraint firstAttribute="trailing" secondItem="9aR-zT-bQU" secondAttribute="trailing" constant="1" id="ZJc-h9-m9z"/>
+                <constraint firstItem="9aR-zT-bQU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="meV-Mt-i6I"/>
+            </constraints>
+            <size key="customSize" width="130" height="45"/>
+            <point key="canvasLocation" x="187.78625954198472" y="-3.1690140845070425"/>
+        </collectionViewCell>
+    </objects>
+</document>
