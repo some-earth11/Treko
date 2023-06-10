@@ -33,6 +33,8 @@ class MagazineViewController: UIViewController {
         return searchBar
     }()
     
+
+    
     var imageArr = ["mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9","mountain1","mountain2","mountain3","mountain4","mountain5","mountain6","mountain7","mountain8","mountain9",]
 
     
